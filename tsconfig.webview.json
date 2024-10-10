@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+      "module": "ESNext",
+      "target": "ES2022",
+      "lib": ["DOM", "ES2022"],
+      "sourceMap": true,
+      "rootDir": "src/viewer",
+      "outDir": "dist",
+      "strict": true,
+      "esModuleInterop": true,
+      "resolveJsonModule": true,
+      "skipLibCheck": true,
+      "moduleResolution": "Node16",
+      "allowSyntheticDefaultImports": true,
+      "declaration": false
+    },
+    "include": ["src/viewer/**/*.ts"],
+    "exclude": ["node_modules", "dist", "media"]
+  }
