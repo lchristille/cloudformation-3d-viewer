@@ -3,7 +3,6 @@
 'use strict';
 
 const path = require('path');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 //@ts-check
 /** @typedef {import('webpack').Configuration} WebpackConfig **/
@@ -54,7 +53,7 @@ const webviewConfig = {
 
   entry: './src/viewer/webview.ts', // The entry point for the webview script
   output: {
-      path: path.resolve(__dirname, 'dist'),
+      path: path.resolve(__dirname, 'media'),
       filename: 'webview.js',
   },
   resolve: {
@@ -76,16 +75,6 @@ const webviewConfig = {
           }
       ]
   },
-  plugins: [
-    new CopyWebpackPlugin({
-      patterns: [
-        {
-          from: path.resolve(__dirname, 'media'), // Copy all files from 'media' directory
-          to: path.resolve(__dirname, 'dist/public') // Output them in the 'dist/webview/media' directory
-        }
-      ]
-    })
-  ],
   devtool: 'nosources-source-map',
 };
 

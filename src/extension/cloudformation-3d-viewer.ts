@@ -116,8 +116,9 @@ export class CloudFormation3DViewerProvider
    */
   private getHtmlForWebview(webview: vscode.Webview): string {
     // Local path to script and css for the webview
+  
     const scriptUri = webview.asWebviewUri(
-      vscode.Uri.joinPath(this.context.extensionUri, "media", "catScratch.js")
+      vscode.Uri.joinPath(this.context.extensionUri, "media", "webview.js")
     );
 
     const styleResetUri = webview.asWebviewUri(
@@ -126,10 +127,6 @@ export class CloudFormation3DViewerProvider
 
     const styleVSCodeUri = webview.asWebviewUri(
       vscode.Uri.joinPath(this.context.extensionUri, "media", "vscode.css")
-    );
-
-    const styleMainUri = webview.asWebviewUri(
-      vscode.Uri.joinPath(this.context.extensionUri, "media", "catScratch.css")
     );
 
     // Use a nonce to whitelist which scripts can be run
@@ -151,26 +148,12 @@ export class CloudFormation3DViewerProvider
 
 				<link href="${styleResetUri}" rel="stylesheet" />
 				<link href="${styleVSCodeUri}" rel="stylesheet" />
-				<link href="${styleMainUri}" rel="stylesheet" />
 
-				<title>Cat Scratch</title>
+				<title>CloudFormation 3D Viewer</title>
 			</head>
 			<body>
-				<div class="notes">
-					<div class="add-button">
-						<button>Scratch!</button>
-					</div>
-				</div>
-				
+        <canvas class="webgl"></canvas>
 				<script nonce="${nonce}" src="${scriptUri}"></script>
-        <script type="importmap">
-          {
-            "imports": {
-              "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js",
-              "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"
-            }
-          }
-        </script>
 			</body>
 			</html>`;
   }

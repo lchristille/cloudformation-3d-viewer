@@ -49,7 +49,7 @@
     "compile-tests": "tsc -p . --outDir out",
     "watch-tests": "tsc -p . -w --outDir out",
     "pretest": "npm run compile-tests && npm run compile && npm run lint",
-    "lint": "eslint src",
+    "lint": "eslint src/extension",
     "test": "vscode-test"
   },
   "devDependencies": {
