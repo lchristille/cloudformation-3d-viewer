@@ -53,6 +53,7 @@
     "test": "vscode-test"
   },
   "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
     "@types/mocha": "^10.0.8",
     "@types/node": "20.x",
     "@types/three": "^0.169.0",
@@ -69,7 +70,7 @@
     "webpack-cli": "^5.1.4"
   },
   "extensionDependencies": [
-    "redhat.vscode-yaml"
+    "amazonwebservices.aws-toolkit-vscode"
   ],
   "dependencies": {
     "three": "^0.169.0"
