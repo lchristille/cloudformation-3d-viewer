@@ -1,78 +1,17 @@
 {
-  "name": "cloudformation-3d-viewer",
-  "displayName": "cloudformation-3d-viewer",
-  "description": "Inspect an AWS CloudFormation template in 3D",
-  "version": "0.0.1",
-  "engines": {
-    "vscode": "^1.94.0"
-  },
-  "categories": [
-    "Other"
+  "private": true,
+  "workspaces": [
+    "packages/*"
   ],
-  "activationEvents": [],
-  "main": "./dist/extension.js",
-  "contributes": {
-    "customEditors": [
-      {
-        "viewType": "cloudformation3d.viewer",
-        "displayName": "CloudFormation 3D Viewer",
-        "selector": [
-          {
-            "filenamePattern": "*.yaml"
-          }
-        ],
-        "priority": "option"
-      }
-    ],
-    "commands": [
-      {
-        "command": "cloudformation3d.openCustomEditorInSideGroup",
-        "title": "3D Viewer",
-        "icon": "$(vr)"
-      }
-    ],
-    "menus": {
-      "editor/title": [
-        {
-          "command": "cloudformation3d.openCustomEditorInSideGroup",
-          "when": "resourceLangId == yaml",
-          "group": "navigation"
-        }
-      ]
-    }
-  },
   "scripts": {
-    "vscode:prepublish": "npm run package",
-    "compile": "webpack",
-    "watch": "webpack --watch",
-    "package": "webpack --mode production --devtool hidden-source-map",
-    "compile-tests": "tsc -p . --outDir out",
-    "watch-tests": "tsc -p . -w --outDir out",
-    "pretest": "npm run compile-tests && npm run compile && npm run lint",
-    "lint": "eslint src/extension",
-    "test": "vscode-test"
+    "build": "yarn workspaces run build",
+    "build:extension": "yarn workspace cloudformation-3d-viewer build",
+    "build:webview": "yarn workspace cloudformation-3d-webview build",
+    "watch": "concurrently \"yarn workspace cloudformation-3d-viewer watch\" \"yarn workspace cloudformation-3d-webview watch\""
   },
   "devDependencies": {
-    "@types/js-yaml": "^4.0.9",
-    "@types/mocha": "^10.0.8",
-    "@types/node": "20.x",
-    "@types/three": "^0.169.0",
-    "@types/vscode": "^1.94.0",
-    "@typescript-eslint/eslint-plugin": "^8.7.0",
-    "@typescript-eslint/parser": "^8.7.0",
-    "@vscode/test-cli": "^0.0.10",
-    "@vscode/test-electron": "^2.4.1",
-    "copy-webpack-plugin": "^12.0.2",
-    "eslint": "^9.11.1",
-    "ts-loader": "^9.5.1",
-    "typescript": "^5.6.2",
-    "webpack": "^5.95.0",
-    "webpack-cli": "^5.1.4"
+    "concurrently": "^7.x.x"
+
   },
-  "extensionDependencies": [
-    "amazonwebservices.aws-toolkit-vscode"
-  ],
-  "dependencies": {
-    "three": "^0.169.0"
-  }
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }

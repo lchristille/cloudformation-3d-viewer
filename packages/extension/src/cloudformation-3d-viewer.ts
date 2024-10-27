@@ -45,15 +45,25 @@ export class CloudFormation3DViewerProvider
     webviewPanel: vscode.WebviewPanel,
     _token: vscode.CancellationToken
   ): Promise<void> {
-	this.getDocumentSymbols(document.uri);
-
+    this.getDocumentSymbols(document.uri);
 
     // Setup initial content for the webview
     webviewPanel.webview.options = {
       enableScripts: true,
       localResourceRoots: [
-        vscode.Uri.joinPath(this.context.extensionUri, 'media')
-      ]
+        vscode.Uri.joinPath(
+          this.context.extensionUri,
+          "..",
+          "webview",
+          "media"
+        ),
+        vscode.Uri.joinPath(
+          this.context.extensionUri,
+          "..",
+          "webview",
+          "dist"
+        )
+      ],
     };
     webviewPanel.webview.html = this.getHtmlForWebview(webviewPanel.webview);
 
@@ -91,7 +101,9 @@ export class CloudFormation3DViewerProvider
         case "getExtensionMediaUri":
           webviewPanel.webview.postMessage({
             command: e.command,
-            extensionMediaUri: webviewPanel.webview.asWebviewUri(vscode.Uri.joinPath(this.context.extensionUri, "media"))
+            extensionMediaUri: webviewPanel.webview.asWebviewUri(
+              vscode.Uri.joinPath(this.context.extensionUri, "media")
+            ),
           });
           return;
 
@@ -108,21 +120,39 @@ export class CloudFormation3DViewerProvider
    */
   private getHtmlForWebview(webview: vscode.Webview): string {
     // Local path to script and css for the webview
-  
+
     const scriptUri = webview.asWebviewUri(
-      vscode.Uri.joinPath(this.context.extensionUri, "media", "webview.js")
+      vscode.Uri.joinPath(
+        this.context.extensionUri,
+        "..",
+        "webview",
+        "dist",
+        "webview.js"
+      )
     );
 
     const styleResetUri = webview.asWebviewUri(
-      vscode.Uri.joinPath(this.context.extensionUri, "media", "reset.css")
+      vscode.Uri.joinPath(
+        this.context.extensionUri,
+        "..",
+        "webview",
+        "media",
+        "reset.css"
+      )
     );
 
     const styleVSCodeUri = webview.asWebviewUri(
-      vscode.Uri.joinPath(this.context.extensionUri, "media", "vscode.css")
+      vscode.Uri.joinPath(
+        this.context.extensionUri,
+        "..",
+        "webview",
+        "media",
+        "vscode.css"
+      )
     );
 
     const mediaUri = webview.asWebviewUri(
-      vscode.Uri.joinPath(this.context.extensionUri, "media")
+      vscode.Uri.joinPath(this.context.extensionUri, "..", "webview", "media")
     );
 
     // Use a nonce to whitelist which scripts can be run
@@ -163,14 +193,14 @@ export class CloudFormation3DViewerProvider
       if (symbols) {
         symbols.forEach((symbol: vscode.DocumentSymbol) => {
           // Check if the symbol is an instance of DocumentSymbol
-            console.log(`DocumentSymbol: ${symbol.name}`);
-            console.log(`Kind: ${vscode.SymbolKind[symbol.kind]}`);
-            console.log(
-              `Range: ${symbol.range.start.line}:${symbol.range.start.character} - ${symbol.range.end.line}:${symbol.range.end.character}`
-            );
+          console.log(`DocumentSymbol: ${symbol.name}`);
+          console.log(`Kind: ${vscode.SymbolKind[symbol.kind]}`);
+          console.log(
+            `Range: ${symbol.range.start.line}:${symbol.range.start.character} - ${symbol.range.end.line}:${symbol.range.end.character}`
+          );
 
-            // If there are children (e.g., nested structures), process them recursively
-            this.processDocumentSymbolChildren(symbol.children);
+          // If there are children (e.g., nested structures), process them recursively
+          this.processDocumentSymbolChildren(symbol.children);
         });
       } else {
         vscode.window.showInformationMessage(
