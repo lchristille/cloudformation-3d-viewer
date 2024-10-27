@@ -1,0 +1,15 @@
+{
+    "version": "0.2",
+    "language": "en",
+    "ignorePaths": [
+        "node_modules",         // Ignore node_modules directory
+        "dist",                 // Ignore dist directory
+        "src/**/*.test.ts",     // Ignore all test files in src directory
+        "public/*.json",         // Ignore JSON files in public directory
+        "*.lock"
+    ],
+    "words": [
+        // Custom words to ignore across the project
+        "myCustomWord"
+    ]
+}
