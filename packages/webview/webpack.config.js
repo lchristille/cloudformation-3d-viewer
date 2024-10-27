@@ -1,13 +1,16 @@
 const path = require('path');
+const dotenv = require('dotenv')
+
+dotenv.config()
 
 module.exports = {
     target: 'web', // Webview code runs in a browser environment
     mode: 'none',
   
-    entry: './src/webview.ts', // The entry point for the webview script
+    entry: './src/index.ts', // The entry point for the webview script
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'webview.js',
+        filename: 'bundle.js',
     },
     resolve: {
         extensions: ['.ts', '.js']
@@ -19,14 +22,16 @@ module.exports = {
                 exclude: /node_modules/,
                 use: [
                     {
-                        loader: 'ts-loader',
-                        options: {
-                          configFile: 'tsconfig.json'
-                        }
+                        loader: 'babel-loader',
                     }
                 ]
             }
         ]
     },
+    plugins: [
+        new webpack.DefinePlugin({
+            'process.env': JSON.stringify(process.env)
+         })
+    ],
     devtool: 'nosources-source-map',
 };

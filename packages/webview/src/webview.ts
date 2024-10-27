@@ -18,8 +18,13 @@ const vscode = acquireVsCodeApi();
 
 // Canvas
 const canvas: HTMLCanvasElement | null = document.querySelector("canvas.webgl");
-const mediaUri = new URL(canvas?.dataset.mediaUri ?? "");
-const textureUri = new URL('textures/', mediaUri);
+
+const metaConfig: HTMLMetaElement | null = document.querySelector('meta[name="webview-config"]');
+
+const publicUri = new URL(metaConfig?.dataset.publicUri ?? "");
+console.log("publicUri", publicUri);
+const textureUri = new URL('textures/', publicUri);
+console.log("textureUri", textureUri);
 
 /**
  * Textures

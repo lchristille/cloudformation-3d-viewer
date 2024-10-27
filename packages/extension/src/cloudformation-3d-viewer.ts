@@ -55,7 +55,7 @@ export class CloudFormation3DViewerProvider
           this.context.extensionUri,
           "..",
           "webview",
-          "media"
+          "public"
         ),
         vscode.Uri.joinPath(
           this.context.extensionUri,
@@ -98,11 +98,11 @@ export class CloudFormation3DViewerProvider
     // Receive message from the webview.
     webviewPanel.webview.onDidReceiveMessage((e) => {
       switch (e.command) {
-        case "getExtensionMediaUri":
+        case "getPublicUri":
           webviewPanel.webview.postMessage({
             command: e.command,
             extensionMediaUri: webviewPanel.webview.asWebviewUri(
-              vscode.Uri.joinPath(this.context.extensionUri, "media")
+              vscode.Uri.joinPath(this.context.extensionUri, "..", "webview", "public")
             ),
           });
           return;
@@ -127,7 +127,7 @@ export class CloudFormation3DViewerProvider
         "..",
         "webview",
         "dist",
-        "webview.js"
+        "bundle.js"
       )
     );
 
@@ -136,7 +136,7 @@ export class CloudFormation3DViewerProvider
         this.context.extensionUri,
         "..",
         "webview",
-        "media",
+        "public",
         "reset.css"
       )
     );
@@ -146,14 +146,14 @@ export class CloudFormation3DViewerProvider
         this.context.extensionUri,
         "..",
         "webview",
-        "media",
+        "public",
         "vscode.css"
       )
     );
 
-    const mediaUri = webview.asWebviewUri(
-      vscode.Uri.joinPath(this.context.extensionUri, "..", "webview", "media")
-    );
+    const publicUri = webview.asWebviewUri(
+      vscode.Uri.joinPath(this.context.extensionUri, "..", "webview", "public")
+    ) + "/";
 
     // Use a nonce to whitelist which scripts can be run
     const nonce = getNonce();
@@ -172,13 +172,16 @@ export class CloudFormation3DViewerProvider
 
 				<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+        <meta name="webview-config" data-public-uri="${publicUri}>
+
 				<link href="${styleResetUri}" rel="stylesheet" />
 				<link href="${styleVSCodeUri}" rel="stylesheet" />
 
 				<title>CloudFormation 3D Viewer</title>
 			</head>
 			<body>
-        <canvas data-media-uri="${mediaUri}/" class="webgl"></canvas>
+        <div id="root"></div>
+        <canvas class="webgl"></canvas>
 				<script nonce="${nonce}" src="${scriptUri}"></script>
 			</body>
 			</html>`;
