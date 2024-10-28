@@ -1,37 +1,36 @@
 const path = require('path');
-const dotenv = require('dotenv')
-
-dotenv.config()
+const webpack = require('webpack');
 
 module.exports = {
     target: 'web', // Webview code runs in a browser environment
-    mode: 'none',
-  
-    entry: './src/index.ts', // The entry point for the webview script
+    mode: 'development',
+    entry: './src/index.tsx', // The entry point for the webview script
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js',
     },
     resolve: {
-        extensions: ['.ts', '.js']
+        extensions: ['.ts', '.js', '.tsx']
     },
     module: {
         rules: [
             {
-                test: /\.ts$/,
+                test: /\.(ts|tsx)$/,
                 exclude: /node_modules/,
                 use: [
                     {
                         loader: 'babel-loader',
+                        options: {
+                            presets: [
+                                '@babel/preset-env', 
+                                '@babel/preset-react', 
+                                '@babel/preset-typescript'
+                            ]
+                        }
                     }
                 ]
             }
         ]
     },
-    plugins: [
-        new webpack.DefinePlugin({
-            'process.env': JSON.stringify(process.env)
-         })
-    ],
     devtool: 'nosources-source-map',
 };

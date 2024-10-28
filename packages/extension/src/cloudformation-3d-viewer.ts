@@ -172,7 +172,7 @@ export class CloudFormation3DViewerProvider
 
 				<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <meta name="webview-config" data-public-uri="${publicUri}>
+        <meta name="webview-config" data-public-uri="${publicUri}">
 
 				<link href="${styleResetUri}" rel="stylesheet" />
 				<link href="${styleVSCodeUri}" rel="stylesheet" />

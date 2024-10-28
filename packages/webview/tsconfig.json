@@ -12,8 +12,10 @@
       "skipLibCheck": true,
       "moduleResolution": "node",
       "allowSyntheticDefaultImports": true,
-      "declaration": false
+      "declaration": false,
+      "jsx": "react-jsx",
+      "jsxImportSource": "react"
     },
-    "include": ["src/**/*.ts"],
+    "include": ["src/**/*.ts", "src/**/*.tsx"],
     "exclude": ["node_modules", "dist", "media"]
   }
