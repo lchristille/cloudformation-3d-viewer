@@ -33,12 +33,12 @@ export default function App() {
         <Float>
           <mesh
             ref={cubeRef}
-            position-x={2}
+            position-x={3}
             rotation-y={Math.PI * 0.25}
             scale={1.5}
           >
             <boxGeometry />
-            <meshStandardMaterial color="mediumpurple" />
+            <meshStandardMaterial color="orange" />
           </mesh>
         </Float>
         <mesh position-y={-1} rotation-x={-Math.PI * 0.5} scale={10}>

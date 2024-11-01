@@ -120,6 +120,12 @@ export class CloudFormation3DViewerProvider
    */
   private getHtmlForWebview(webview: vscode.Webview): string {
     // Local path to script and css for the webview
+    // Use a nonce to whitelist which scripts can be run
+    const nonce = getNonce();
+
+    const isDevelopment = process.env.NODE_ENV === 'development';
+    const connectSrc = isDevelopment ? `http://localhost:9900 ws://localhost:9900` : `${webview.cspSource}`;
+    const scriptSrc = isDevelopment ? `'nonce-${nonce}' http://localhost:9900` : `'nonce-${nonce}'`;
 
     const scriptUri = webview.asWebviewUri(
       vscode.Uri.joinPath(
@@ -155,8 +161,6 @@ export class CloudFormation3DViewerProvider
       vscode.Uri.joinPath(this.context.extensionUri, "..", "webview", "public")
     ) + "/";
 
-    // Use a nonce to whitelist which scripts can be run
-    const nonce = getNonce();
 
     return /* html */ `
 			<!DOCTYPE html>
@@ -168,7 +172,7 @@ export class CloudFormation3DViewerProvider
 				Use a content security policy to only allow loading images from https or from our extension directory,
 				and only allow scripts that have a specific nonce.
 				-->
-				<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src ${webview.cspSource}; style-src ${webview.cspSource}; script-src 'nonce-${nonce}';">
+				<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src ${webview.cspSource}; style-src ${webview.cspSource}; script-src ${scriptSrc}; connect-src ${connectSrc};">
 
 				<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -181,7 +185,10 @@ export class CloudFormation3DViewerProvider
 			</head>
 			<body>
         <div id="root"></div>
-				<script nonce="${nonce}" src="${scriptUri}"></script>
+        ${ isDevelopment
+          ? `<script nonce="${process.env.NONCE}" src="http://localhost:9900/bundle.js"></script>`
+          : `<script nonce="${nonce}" src="${scriptUri}"></script>`
+        }
 			</body>
 			</html>`;
   }
