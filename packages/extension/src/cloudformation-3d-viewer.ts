@@ -1,5 +1,6 @@
 import * as vscode from "vscode";
 import { getNonce } from "./util";
+import { CspBuilder, CspDirective } from "./cspBuilder";
 
 /**
  * Provider for cat scratch editors.
@@ -124,8 +125,28 @@ export class CloudFormation3DViewerProvider
     const nonce = getNonce();
 
     const isDevelopment = process.env.NODE_ENV === 'development';
-    const connectSrc = isDevelopment ? `http://localhost:9900 ws://localhost:9900 ws://localhost:8097` : `${webview.cspSource}`;
-    const scriptSrc = isDevelopment ? `'nonce-${nonce}' http://localhost:9900` : `'nonce-${nonce}'`;
+    const cspBuilder = new CspBuilder(isDevelopment);
+    const csp = cspBuilder
+      .addSource(CspDirective.ImgSrc, webview.cspSource)
+      .addSource(CspDirective.ImgSrc, 'data:', true)
+      .addSource(CspDirective.StyleSrc, webview.cspSource)
+      .addSource(CspDirective.StyleSrc, `'unsafe-inline'`, true)
+      .addSource(CspDirective.StyleSrc, 'https://*.vscode-cdn.net', true)
+      .addSource(CspDirective.ScriptSrc, `'nonce-${nonce}'`)
+      .addSource(CspDirective.ScriptSrc, 'http://localhost:9900', true)
+      .addSource(CspDirective.ScriptSrc, 'http://localhost:8097', true)
+      .addSource(CspDirective.ScriptSrc, 'blob:', true)
+      .addSource(CspDirective.ConnectSrc, webview.cspSource)
+      .addSource(CspDirective.ConnectSrc, 'http://localhost:9900', true)
+      .addSource(CspDirective.ConnectSrc, 'ws://localhost:9900', true)
+      .addSource(CspDirective.ConnectSrc, 'ws://localhost:8097', true)
+      .addSource(CspDirective.ConnectSrc, 'data:', true)
+      .addSource(CspDirective.WorkerSrc, 'blob:', true)
+      .addSource(CspDirective.FontSrc, webview.cspSource)
+      .addSource(CspDirective.FontSrc, 'data:', true)
+      .build()
+
+      console.log("csp", csp);
 
     const scriptUri = webview.asWebviewUri(
       vscode.Uri.joinPath(
@@ -172,7 +193,7 @@ export class CloudFormation3DViewerProvider
 				Use a content security policy to only allow loading images from https or from our extension directory,
 				and only allow scripts that have a specific nonce.
 				-->
-				<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src ${webview.cspSource} data:; style-src ${webview.cspSource} 'unsafe-inline' https://*.vscode-cdn.net; script-src ${scriptSrc}; connect-src ${connectSrc};">
+				<meta http-equiv="Content-Security-Policy" content="${csp}">
 
 				<meta name="viewport" content="width=device-width, initial-scale=1.0">
 

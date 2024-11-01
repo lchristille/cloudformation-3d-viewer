@@ -9,7 +9,6 @@ if (rootElement) {
   const root = createRoot(rootElement);
   root.render(
     <StrictMode>
-      <Leva />
       <Canvas>
         <App />
       </Canvas>

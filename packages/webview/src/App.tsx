@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { Group, Mesh } from "three";
 import { Float, TransformControls, OrbitControls } from "@react-three/drei";
 import { useControls } from "leva";
+import { Perf } from "r3f-perf";
 
 export default function App() {
   const cubeRef = useRef<Mesh>(null);
@@ -10,7 +11,11 @@ export default function App() {
 
   const [transformTarget, setTransformTarget] = useState<Mesh | null>(null);
 
-  const { position, color } = useControls({
+  const { showStats } = useControls({
+    showStats: false
+  })
+
+  const { position, color } = useControls("sphere", {
       position: { value: { x: -2, y: 0, z: 0}, min: -5, max: 5, step: 0.1 },
       color: '#ff0000'
   });
@@ -27,6 +32,7 @@ export default function App() {
 
   return (
     <>
+      { showStats && <Perf position="bottom-right" />}
       <OrbitControls makeDefault />
       <directionalLight position={[1, 2, 3]} intensity={4.5} />
       <ambientLight intensity={1.5} />
