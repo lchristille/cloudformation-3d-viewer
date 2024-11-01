@@ -181,7 +181,6 @@ export class CloudFormation3DViewerProvider
 			</head>
 			<body>
         <div id="root"></div>
-        <canvas class="webgl"></canvas>
 				<script nonce="${nonce}" src="${scriptUri}"></script>
 			</body>
 			</html>`;
