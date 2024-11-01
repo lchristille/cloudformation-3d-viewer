@@ -2,12 +2,18 @@ import { useFrame } from "@react-three/fiber";
 import { useEffect, useRef, useState } from "react";
 import { Group, Mesh } from "three";
 import { Float, TransformControls, OrbitControls } from "@react-three/drei";
+import { useControls } from "leva";
 
 export default function App() {
   const cubeRef = useRef<Mesh>(null);
   const groupRef = useRef<Group>(null);
 
   const [transformTarget, setTransformTarget] = useState<Mesh | null>(null);
+
+  const { position, color } = useControls({
+      position: { value: { x: -2, y: 0, z: 0}, min: -5, max: 5, step: 0.1 },
+      color: '#ff0000'
+  });
 
   useEffect(() => {
     setTransformTarget(cubeRef.current);
@@ -26,7 +32,7 @@ export default function App() {
       <ambientLight intensity={1.5} />
 
       <group ref={groupRef}>
-        <mesh position-x={-2}>
+        <mesh position={ [position.x, position.y, position.z ]}>
           <sphereGeometry />
           <meshStandardMaterial color="orange" />
         </mesh>
@@ -38,7 +44,7 @@ export default function App() {
             scale={1.5}
           >
             <boxGeometry />
-            <meshStandardMaterial color="red" />
+            <meshStandardMaterial color={color} />
           </mesh>
         </Float>
         <mesh position-y={-1} rotation-x={-Math.PI * 0.5} scale={10}>
