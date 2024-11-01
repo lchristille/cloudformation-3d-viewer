@@ -124,7 +124,7 @@ export class CloudFormation3DViewerProvider
     const nonce = getNonce();
 
     const isDevelopment = process.env.NODE_ENV === 'development';
-    const connectSrc = isDevelopment ? `http://localhost:9900 ws://localhost:9900` : `${webview.cspSource}`;
+    const connectSrc = isDevelopment ? `http://localhost:9900 ws://localhost:9900 ws://localhost:8097` : `${webview.cspSource}`;
     const scriptSrc = isDevelopment ? `'nonce-${nonce}' http://localhost:9900` : `'nonce-${nonce}'`;
 
     const scriptUri = webview.asWebviewUri(
@@ -186,7 +186,7 @@ export class CloudFormation3DViewerProvider
 			<body>
         <div id="root"></div>
         ${ isDevelopment
-          ? `<script nonce="${process.env.NONCE}" src="http://localhost:9900/bundle.js"></script>`
+          ? `<script nonce="${nonce}" src="http://localhost:8097"></script><script nonce="${process.env.NONCE}" src="http://localhost:9900/bundle.js"></script>`
           : `<script nonce="${nonce}" src="${scriptUri}"></script>`
         }
 			</body>

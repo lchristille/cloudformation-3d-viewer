@@ -35,6 +35,14 @@
 				"npm: watch-tests"
 			],
 			"problemMatcher": []
-		}
+		},
+		{
+            "type": "npm",
+            "label": "stop-watchers",
+            "script": "stop-watch",
+            "presentation": {
+                "reveal": "never"
+            }
+        }
 	]
 }

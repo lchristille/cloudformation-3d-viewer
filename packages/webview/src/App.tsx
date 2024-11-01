@@ -38,7 +38,7 @@ export default function App() {
             scale={1.5}
           >
             <boxGeometry />
-            <meshStandardMaterial color="orange" />
+            <meshStandardMaterial color="red" />
           </mesh>
         </Float>
         <mesh position-y={-1} rotation-x={-Math.PI * 0.5} scale={10}>
