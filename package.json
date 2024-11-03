@@ -7,11 +7,13 @@
     "build": "yarn workspaces run build",
     "build:extension": "yarn workspace cloudformation-3d-viewer build",
     "build:webview": "yarn workspace cloudformation-3d-webview build",
-    "watch": "concurrently \"yarn workspace cloudformation-3d-viewer watch\" \"yarn workspace cloudformation-3d-webview watch\""
+    "watch": "node watch-runner.js start",
+    "stop-watch": "node watch-runner.js stop"
   },
   "devDependencies": {
-    "concurrently": "^7.x.x"
-
+    "concurrently": "^7.x.x",
+    "cross-env": "^7.0.3",
+    "react-devtools": "^6.0.1"
   },
   "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }

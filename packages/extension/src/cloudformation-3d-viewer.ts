@@ -1,5 +1,6 @@
 import * as vscode from "vscode";
 import { getNonce } from "./util";
+import { CspBuilder, CspDirective } from "./cspBuilder";
 
 /**
  * Provider for cat scratch editors.
@@ -55,7 +56,7 @@ export class CloudFormation3DViewerProvider
           this.context.extensionUri,
           "..",
           "webview",
-          "media"
+          "public"
         ),
         vscode.Uri.joinPath(
           this.context.extensionUri,
@@ -98,11 +99,11 @@ export class CloudFormation3DViewerProvider
     // Receive message from the webview.
     webviewPanel.webview.onDidReceiveMessage((e) => {
       switch (e.command) {
-        case "getExtensionMediaUri":
+        case "getPublicUri":
           webviewPanel.webview.postMessage({
             command: e.command,
             extensionMediaUri: webviewPanel.webview.asWebviewUri(
-              vscode.Uri.joinPath(this.context.extensionUri, "media")
+              vscode.Uri.joinPath(this.context.extensionUri, "..", "webview", "public")
             ),
           });
           return;
@@ -120,6 +121,34 @@ export class CloudFormation3DViewerProvider
    */
   private getHtmlForWebview(webview: vscode.Webview): string {
     // Local path to script and css for the webview
+    // Use a nonce to whitelist which scripts can be run
+    const nonce = getNonce();
+
+    const isDevelopment = process.env.NODE_ENV === 'development';
+    const cspBuilder = new CspBuilder(isDevelopment);
+    const csp = cspBuilder
+      .addSource(CspDirective.ImgSrc, webview.cspSource)
+      .addSource(CspDirective.ImgSrc, 'data:', true)
+      .addSource(CspDirective.StyleSrc, webview.cspSource)
+      .addSource(CspDirective.StyleSrc, `'unsafe-inline'`, true)
+      .addSource(CspDirective.StyleSrc, 'https://*.vscode-cdn.net', true)
+      .addSource(CspDirective.ScriptSrc, `'nonce-${nonce}'`)
+      .addSource(CspDirective.ScriptSrc, `'wasm-unsafe-eval'`, true)
+      .addSource(CspDirective.ScriptSrc, 'http://localhost:9900', true)
+      .addSource(CspDirective.ScriptSrc, 'http://localhost:8097', true)
+      .addSource(CspDirective.ScriptSrc, 'blob:', true)
+      .addSource(CspDirective.ConnectSrc, webview.cspSource)
+      .addSource(CspDirective.ConnectSrc, 'https://www.gstatic.com/draco/')
+      .addSource(CspDirective.ConnectSrc, 'http://localhost:9900', true)
+      .addSource(CspDirective.ConnectSrc, 'ws://localhost:9900', true)
+      .addSource(CspDirective.ConnectSrc, 'ws://localhost:8097', true)
+      .addSource(CspDirective.ConnectSrc, 'data:', true)
+      .addSource(CspDirective.WorkerSrc, 'blob:', true)
+      .addSource(CspDirective.FontSrc, webview.cspSource)
+      .addSource(CspDirective.FontSrc, 'data:', true)
+      .build()
+
+      console.log("csp", csp);
 
     const scriptUri = webview.asWebviewUri(
       vscode.Uri.joinPath(
@@ -127,7 +156,7 @@ export class CloudFormation3DViewerProvider
         "..",
         "webview",
         "dist",
-        "webview.js"
+        "bundle.js"
       )
     );
 
@@ -136,7 +165,7 @@ export class CloudFormation3DViewerProvider
         this.context.extensionUri,
         "..",
         "webview",
-        "media",
+        "public",
         "reset.css"
       )
     );
@@ -146,17 +175,15 @@ export class CloudFormation3DViewerProvider
         this.context.extensionUri,
         "..",
         "webview",
-        "media",
+        "public",
         "vscode.css"
       )
     );
 
-    const mediaUri = webview.asWebviewUri(
-      vscode.Uri.joinPath(this.context.extensionUri, "..", "webview", "media")
-    );
+    const publicUri = webview.asWebviewUri(
+      vscode.Uri.joinPath(this.context.extensionUri, "..", "webview", "public")
+    ) + "/";
 
-    // Use a nonce to whitelist which scripts can be run
-    const nonce = getNonce();
 
     return /* html */ `
 			<!DOCTYPE html>
@@ -168,9 +195,11 @@ export class CloudFormation3DViewerProvider
 				Use a content security policy to only allow loading images from https or from our extension directory,
 				and only allow scripts that have a specific nonce.
 				-->
-				<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src ${webview.cspSource}; style-src ${webview.cspSource}; script-src 'nonce-${nonce}';">
+				<meta http-equiv="Content-Security-Policy" content="${csp}">
 
 				<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="webview-config" data-public-uri="${publicUri}">
 
 				<link href="${styleResetUri}" rel="stylesheet" />
 				<link href="${styleVSCodeUri}" rel="stylesheet" />
@@ -178,8 +207,11 @@ export class CloudFormation3DViewerProvider
 				<title>CloudFormation 3D Viewer</title>
 			</head>
 			<body>
-        <canvas data-media-uri="${mediaUri}/" class="webgl"></canvas>
-				<script nonce="${nonce}" src="${scriptUri}"></script>
+        <div id="root"></div>
+        ${ isDevelopment
+          ? `<script nonce="${nonce}" src="http://localhost:8097"></script><script nonce="${process.env.NONCE}" src="http://localhost:9900/bundle.js"></script>`
+          : `<script nonce="${nonce}" src="${scriptUri}"></script>`
+        }
 			</body>
 			</html>`;
   }

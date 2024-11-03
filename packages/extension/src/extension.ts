@@ -26,7 +26,6 @@ export function activate(context: vscode.ExtensionContext) {
             "cloudformation3d.viewer",
             vscode.ViewColumn.Beside,
             {
-              localResourceRoots: [vscode.Uri.joinPath(context.extensionUri, 'media')]
             }
           );
         } else {
