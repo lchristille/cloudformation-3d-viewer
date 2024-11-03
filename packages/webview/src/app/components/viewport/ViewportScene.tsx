@@ -1,4 +1,3 @@
-import { useFrame } from "@react-three/fiber";
 import { Suspense, useEffect, useRef, useState } from "react";
 import { DirectionalLight, Group, Mesh } from "three";
 import {
@@ -8,12 +7,11 @@ import {
 } from "@react-three/drei";
 import { useControls } from "leva";
 import { Perf } from "r3f-perf";
+import { observer } from "mobx-react-lite";
+import { useStore } from "../../stores/StoreContext";
 
-import Model from "./Model";
-import Fox from "./Fox";
-
-export default function App() {
-  const cubeRef = useRef<Mesh>(null);
+const ViewportScene: React.FC = observer(() => {
+  const { layoutStore } = useStore();
   const groupRef = useRef<Group>(null);
   const directionalLight = useRef<DirectionalLight>(
     null
@@ -21,15 +19,12 @@ export default function App() {
 
   // useHelper(directionalLight, THREE.DirectionalLightHelper, 1);
 
-  const { showStats } = useControls({
-    showStats: false,
-  });
-
+  console.log(layoutStore.showStats);
 
   return (
     <>
       <SoftShadows size={25} samples={10} focus={0} />
-      {showStats && <Perf position="bottom-right" />}
+      {layoutStore.showStats && <Perf position="bottom-right" />}
       <OrbitControls makeDefault />
       <directionalLight
         ref={directionalLight}
@@ -55,4 +50,6 @@ export default function App() {
       </group>
     </>
   );
-}
+})
+
+export default ViewportScene;

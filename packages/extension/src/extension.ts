@@ -44,7 +44,7 @@ async function checkAwsToolkitExtension() {
   );
   if (!awsToolkitExtensions) {
     vscode.window.showErrorMessage(
-      "Red Hat YAML extension is not installed. Please install it to enable YAML parsing features."
+      "AWS Toolkit extension is not installed. Please install it to enable CloudFormation Templates parsing features."
     );
     return;
   }

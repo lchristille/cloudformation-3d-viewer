@@ -1,28 +1,21 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { Canvas } from "@react-three/fiber";
-import App from "./App";
 import { InitSettings } from "./settings";
+import "../public/styles/tailwind.css";
+import App from "./app/App";
+import { StoreProvider } from "./app/stores/StoreContext";
 
 const rootElement = document.querySelector("#root");
 
-InitSettings()
+InitSettings();
 
 if (rootElement) {
   const root = createRoot(rootElement);
   root.render(
     <StrictMode>
-      <Canvas
-        shadows
-        camera={{
-          fov: 75,
-          near: 0.1,
-          far: 200,
-          position: [-4, 3, 6],
-        }}
-      >
+      <StoreProvider>
         <App />
-      </Canvas>
+      </StoreProvider>
     </StrictMode>
   );
 }

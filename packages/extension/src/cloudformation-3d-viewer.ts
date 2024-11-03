@@ -166,7 +166,7 @@ export class CloudFormation3DViewerProvider
         "..",
         "webview",
         "public",
-        "css",
+        "styles",
         "reset.css"
       )
     );
@@ -177,7 +177,7 @@ export class CloudFormation3DViewerProvider
         "..",
         "webview",
         "public",
-        "css",
+        "styles",
         "vscode.css"
       )
     );

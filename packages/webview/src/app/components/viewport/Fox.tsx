@@ -1,5 +1,5 @@
-import { PUBLIC_URI } from "./settings";
-import { AppendURL } from "./helpers";
+import { PUBLIC_URI } from "../../../settings";
+import { AppendURL } from "../../../helpers";
 import { Clone, useGLTF, useAnimations } from "@react-three/drei";
 import { useEffect } from "react";
 

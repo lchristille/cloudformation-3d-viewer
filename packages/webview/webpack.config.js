@@ -27,7 +27,7 @@ module.exports = {
           {
             loader: "babel-loader",
             options: {
-              plugins: [isDevelopment && require.resolve('react-refresh/babel')].filter(Boolean),
+              plugins: [isDevelopment && require.resolve('react-refresh/babel'), '@emotion/babel-plugin'].filter(Boolean),
               presets: [
                 "@babel/preset-env",
                 ["@babel/preset-react", { runtime: "automatic" }],
@@ -37,6 +37,21 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.css$/i,
+        use: [
+          'style-loader',
+          'css-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                config: path.resolve(__dirname, 'postcss.config.js')
+              }
+            }
+          }
+        ]
+      }
     ],
   },
   plugins: [
