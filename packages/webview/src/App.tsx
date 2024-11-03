@@ -21,26 +21,10 @@ export default function App() {
 
   // useHelper(directionalLight, THREE.DirectionalLightHelper, 1);
 
-  const [transformTarget, setTransformTarget] = useState<Mesh | null>(null);
-
   const { showStats } = useControls({
     showStats: false,
   });
 
-  const { position, color } = useControls("sphere", {
-    position: { value: { x: -2, y: 0, z: 0 }, min: -5, max: 5, step: 0.1 },
-    color: "#ff0000",
-  });
-
-  useEffect(() => {
-    setTransformTarget(cubeRef.current);
-  }, [cubeRef.current]);
-
-  useFrame((state, delta) => {
-    if (cubeRef.current) {
-      cubeRef.current.rotation.y += delta * 0.3;
-    }
-  });
 
   return (
     <>
@@ -58,7 +42,6 @@ export default function App() {
 
       <group ref={groupRef}>
         <Suspense>
-          <Fox />
         </Suspense>
         <mesh
           receiveShadow
@@ -70,14 +53,6 @@ export default function App() {
           <meshStandardMaterial color="greenyellow" />
         </mesh>
       </group>
-
-      {transformTarget && (
-        <TransformControls
-          object={transformTarget}
-          mode="translate"
-          enabled={true}
-        />
-      )}
     </>
   );
 }

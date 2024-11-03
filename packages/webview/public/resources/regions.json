@@ -1,0 +1,206 @@
+[
+    {
+        "RegionName": "US East (Ohio)",
+        "Region": "us-east-2",
+        "SingleFileUrl": "https://dnwj8swjjbsbt.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json",
+        "AllFilesUrl": "https://dnwj8swjjbsbt.cloudfront.net/latest/CloudFormationResourceSpecification.zip"
+    },
+    {
+        "RegionName": "US East (N. Virginia)",
+        "Region": "us-east-1",
+        "SingleFileUrl": "https://d1uauaxba7bl26.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json",
+        "AllFilesUrl": "https://d1uauaxba7bl26.cloudfront.net/latest/CloudFormationResourceSpecification.zip"
+    },
+    {
+        "RegionName": "US West (N. California)",
+        "Region": "us-west-1",
+        "SingleFileUrl": "https://d68hl49wbnanq.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json",
+        "AllFilesUrl": "https://d68hl49wbnanq.cloudfront.net/latest/CloudFormationResourceSpecification.zip"
+    },
+    {
+        "RegionName": "US West (Oregon)",
+        "Region": "us-west-2",
+        "SingleFileUrl": "https://d201a2mn26r7lk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json",
+        "AllFilesUrl": "https://d201a2mn26r7lk.cloudfront.net/latest/CloudFormationResourceSpecification.zip"
+    },
+    {
+        "RegionName": "Africa (Cape Town)",
+        "Region": "af-south-1",
+        "SingleFileUrl": "https://cfn-resource-specifications-af-south-1-prod.s3.af-south-1.amazonaws.com/latest/gzip/CloudFormationResourceSpecification.json",
+        "AllFilesUrl": "https://cfn-resource-specifications-af-south-1-prod.s3.af-south-1.amazonaws.com/latest/CloudFormationResourceSpecification.zip"
+    },
+    {
+        "RegionName": "Asia Pacific (Hong Kong)",
+        "Region": "ap-east-1",
+        "SingleFileUrl": "https://cfn-resource-specifications-ap-east-1-prod.s3.ap-east-1.amazonaws.com/latest/gzip/CloudFormationResourceSpecification.json",
+        "AllFilesUrl": "https://cfn-resource-specifications-ap-east-1-prod.s3.ap-east-1.amazonaws.com/latest/CloudFormationResourceSpecification.zip"
+    },
+    {
+        "RegionName": "Asia Pacific (Hyderabad)",
+        "Region": "ap-south-2",
+        "SingleFileUrl": "https://cfn-resource-specifications-ap-south-2-prod.s3.ap-south-2.amazonaws.com/latest/gzip/CloudFormationResourceSpecification.json",
+        "AllFilesUrl": "https://cfn-resource-specifications-ap-south-2-prod.s3.ap-south-2.amazonaws.com/latest/CloudFormationResourceSpecification.zip"
+    },
+    {
+        "RegionName": "Asia Pacific (Jakarta)",
+        "Region": "ap-southeast-3",
+        "SingleFileUrl": "https://cfn-resource-specifications-ap-southeast-3-prod.s3.ap-southeast-3.amazonaws.com/latest/CloudFormationResourceSpecification.json",
+        "AllFilesUrl": "https://cfn-resource-specifications-ap-southeast-3-prod.s3.ap-southeast-3.amazonaws.com/latest/CloudFormationResourceSpecification.zip"
+    },
+    {
+        "RegionName": "Asia Pacific (Malaysia)",
+        "Region": "ap-southeast-5",
+        "SingleFileUrl": "https://cfn-resource-specifications-ap-southeast-5-prod.s3.ap-southeast-5.amazonaws.com/latest/CloudFormationResourceSpecification.json",
+        "AllFilesUrl": "https://cfn-resource-specifications-ap-southeast-5-prod.s3.ap-southeast-5.amazonaws.com/latest/CloudFormationResourceSpecification.zip"
+    },
+    {
+        "RegionName": "Asia Pacific (Melbourne)",
+        "Region": "ap-southeast-4",
+        "SingleFileUrl": "https://cfn-resource-specifications-ap-southeast-4-prod.s3.ap-southeast-4.amazonaws.com/latest/CloudFormationResourceSpecification.json",
+        "AllFilesUrl": "https://cfn-resource-specifications-ap-southeast-4-prod.s3.ap-southeast-4.amazonaws.com/latest/CloudFormationResourceSpecification.zip"
+    },
+    {
+        "RegionName": "Asia Pacific (Mumbai)",
+        "Region": "ap-south-1",
+        "SingleFileUrl": "https://d2senuesg1djtx.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json",
+        "AllFilesUrl": "https://d2senuesg1djtx.cloudfront.net/latest/CloudFormationResourceSpecification.zip"
+    },
+    {
+        "RegionName": "Asia Pacific (Osaka)",
+        "Region": "ap-northeast-3",
+        "SingleFileUrl": "https://d2zq80gdmjim8k.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json",
+        "AllFilesUrl": "https://d2zq80gdmjim8k.cloudfront.net/latest/CloudFormationResourceSpecification.zip"
+    },
+    {
+        "RegionName": "Asia Pacific (Seoul)",
+        "Region": "ap-northeast-2",
+        "SingleFileUrl": "https://d1ane3fvebulky.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json",
+        "AllFilesUrl": "https://d1ane3fvebulky.cloudfront.net/latest/CloudFormationResourceSpecification.zip"
+    },
+    {
+        "RegionName": "Asia Pacific (Singapore)",
+        "Region": "ap-southeast-1",
+        "SingleFileUrl": "https://doigdx0kgq9el.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json",
+        "AllFilesUrl": "https://doigdx0kgq9el.cloudfront.net/latest/CloudFormationResourceSpecification.zip"
+    },
+    {
+        "RegionName": "Asia Pacific (Sydney)",
+        "Region": "ap-southeast-2",
+        "SingleFileUrl": "https://d2stg8d246z9di.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json",
+        "AllFilesUrl": "https://d2stg8d246z9di.cloudfront.net/latest/CloudFormationResourceSpecification.zip"
+    },
+    {
+        "RegionName": "Asia Pacific (Tokyo)",
+        "Region": "ap-northeast-1",
+        "SingleFileUrl": "https://d33vqc0rt9ld30.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json",
+        "AllFilesUrl": "https://d33vqc0rt9ld30.cloudfront.net/latest/CloudFormationResourceSpecification.zip"
+    },
+    {
+        "RegionName": "Canada (Central)",
+        "Region": "ca-central-1",
+        "SingleFileUrl": "https://d2s8ygphhesbe7.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json",
+        "AllFilesUrl": "https://d2s8ygphhesbe7.cloudfront.net/latest/CloudFormationResourceSpecification.zip"
+    },
+    {
+        "RegionName": "Canada West (Calgary)",
+        "Region": "ca-west-1",
+        "SingleFileUrl": "https://cfn-resource-specifications-ca-west-1-prod.s3.ca-west-1.amazonaws.com/latest/CloudFormationResourceSpecification.json",
+        "AllFilesUrl": "https://cfn-resource-specifications-ca-west-1-prod.s3.ca-west-1.amazonaws.com/latest/CloudFormationResourceSpecification.zip"
+    },
+    {
+        "RegionName": "China (Beijing)",
+        "Region": "cn-north-1",
+        "SingleFileUrl": "https://cfn-resource-specifications-cn-north-1-prod.s3.cn-north-1.amazonaws.com.cn/latest/gzip/CloudFormationResourceSpecification.json",
+        "AllFilesUrl": "https://cfn-resource-specifications-cn-north-1-prod.s3.cn-north-1.amazonaws.com.cn/latest/CloudFormationResourceSpecification.zip"
+    },
+    {
+        "RegionName": "China (Ningxia)",
+        "Region": "cn-northwest-1",
+        "SingleFileUrl": "https://cfn-resource-specifications-cn-northwest-1-prod.s3.cn-northwest-1.amazonaws.com.cn/latest/gzip/CloudFormationResourceSpecification.json",
+        "AllFilesUrl": "https://cfn-resource-specifications-cn-northwest-1-prod.s3.cn-northwest-1.amazonaws.com.cn/latest/CloudFormationResourceSpecification.zip"
+    },
+    {
+        "RegionName": "Europe (Frankfurt)",
+        "Region": "eu-central-1",
+        "SingleFileUrl": "https://d1mta8qj7i28i2.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json",
+        "AllFilesUrl": "https://d1mta8qj7i28i2.cloudfront.net/latest/CloudFormationResourceSpecification.zip"
+    },
+    {
+        "RegionName": "Europe (Ireland)",
+        "Region": "eu-west-1",
+        "SingleFileUrl": "https://d3teyb21fexa9r.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json",
+        "AllFilesUrl": "https://d3teyb21fexa9r.cloudfront.net/latest/CloudFormationResourceSpecification.zip"
+    },
+    {
+        "RegionName": "Europe (London)",
+        "Region": "eu-west-2",
+        "SingleFileUrl": "https://d1742qcu2c1ncx.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json",
+        "AllFilesUrl": "https://d1742qcu2c1ncx.cloudfront.net/latest/CloudFormationResourceSpecification.zip"
+    },
+    {
+        "RegionName": "Europe (Milan)",
+        "Region": "eu-south-1",
+        "SingleFileUrl": "https://cfn-resource-specifications-eu-south-1-prod.s3.eu-south-1.amazonaws.com/latest/gzip/CloudFormationResourceSpecification.json",
+        "AllFilesUrl": "https://cfn-resource-specifications-eu-south-1-prod.s3.eu-south-1.amazonaws.com/latest/CloudFormationResourceSpecification.zip"
+    },
+    {
+        "RegionName": "Europe (Paris)",
+        "Region": "eu-west-3",
+        "SingleFileUrl": "https://d2d0mfegowb3wk.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json",
+        "AllFilesUrl": "https://d2d0mfegowb3wk.cloudfront.net/latest/CloudFormationResourceSpecification.zip"
+    },
+    {
+        "RegionName": "Europe (Spain)",
+        "Region": "eu-south-2",
+        "SingleFileUrl": "https://cfn-resource-specifications-eu-south-2-prod.s3.eu-south-2.amazonaws.com/latest/gzip/CloudFormationResourceSpecification.json",
+        "AllFilesUrl": "https://cfn-resource-specifications-eu-south-2-prod.s3.eu-south-2.amazonaws.com/latest/CloudFormationResourceSpecification.zip"
+    },
+    {
+        "RegionName": "Europe (Stockholm)",
+        "Region": "eu-north-1",
+        "SingleFileUrl": "https://diy8iv58sj6ba.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json",
+        "AllFilesUrl": "https://diy8iv58sj6ba.cloudfront.net/latest/CloudFormationResourceSpecification.zip"
+    },
+    {
+        "RegionName": "Europe (Zurich)",
+        "Region": "eu-central-2",
+        "SingleFileUrl": "https://cfn-resource-specifications-eu-central-2-prod.s3.eu-central-2.amazonaws.com/latest/gzip/CloudFormationResourceSpecification.json",
+        "AllFilesUrl": "https://cfn-resource-specifications-eu-central-2-prod.s3.eu-central-2.amazonaws.com/latest/CloudFormationResourceSpecification.zip"
+    },
+    {
+        "RegionName": "Israel (Tel Aviv)",
+        "Region": "il-central-1",
+        "SingleFileUrl": "https://cfn-resource-specifications-il-central-1-prod.s3.il-central-1.amazonaws.com/latest/gzip/CloudFormationResourceSpecification.json",
+        "AllFilesUrl": "https://cfn-resource-specifications-il-central-1-prod.s3.il-central-1.amazonaws.com/latest/CloudFormationResourceSpecification.zip"
+    },
+    {
+        "RegionName": "Middle East (Bahrain)",
+        "Region": "me-south-1",
+        "SingleFileUrl": "https://cfn-resource-specifications-me-south-1-prod.s3.me-south-1.amazonaws.com/latest/gzip/CloudFormationResourceSpecification.json",
+        "AllFilesUrl": "https://cfn-resource-specifications-me-south-1-prod.s3.me-south-1.amazonaws.com/latest/CloudFormationResourceSpecification.zip"
+    },
+    {
+        "RegionName": "Middle East (UAE)",
+        "Region": "me-central-1",
+        "SingleFileUrl": "https://cfn-resource-specifications-me-central-1-prod.s3.me-central-1.amazonaws.com/latest/gzip/CloudFormationResourceSpecification.json",
+        "AllFilesUrl": "https://cfn-resource-specifications-me-central-1-prod.s3.me-central-1.amazonaws.com/latest/CloudFormationResourceSpecification.zip"
+    },
+    {
+        "RegionName": "South America (S\u00c3\u00a3o Paulo)",
+        "Region": "sa-east-1",
+        "SingleFileUrl": "https://d3c9jyj3w509b0.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json",
+        "AllFilesUrl": "https://d3c9jyj3w509b0.cloudfront.net/latest/CloudFormationResourceSpecification.zip"
+    },
+    {
+        "RegionName": "AWS GovCloud (US-East)",
+        "Region": "us-gov-east-1",
+        "SingleFileUrl": "https://s3.us-gov-east-1.amazonaws.com/cfn-resource-specifications-us-gov-east-1-prod/latest/CloudFormationResourceSpecification.json",
+        "AllFilesUrl": "https://s3.us-gov-east-1.amazonaws.com/cfn-resource-specifications-us-gov-east-1-prod/latest/CloudFormationResourceSpecification.zip"
+    },
+    {
+        "RegionName": "AWS GovCloud (US-West)",
+        "Region": "us-gov-west-1",
+        "SingleFileUrl": "https://s3.us-gov-west-1.amazonaws.com/cfn-resource-specifications-us-gov-west-1-prod/latest/CloudFormationResourceSpecification.json",
+        "AllFilesUrl": "https://s3.us-gov-west-1.amazonaws.com/cfn-resource-specifications-us-gov-west-1-prod/latest/CloudFormationResourceSpecification.zip"
+    }
+]

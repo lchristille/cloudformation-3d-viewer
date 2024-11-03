@@ -1,0 +1,1726 @@
+[
+  {
+    "Category": "Analytics",
+    "FilePath": "Analytics\\Athena.png",
+    "ServiceGuessedName": "Athena",
+    "ServiceTypeIdentifier": "AWS::Athena"
+  },
+  {
+    "Category": "Analytics",
+    "FilePath": "Analytics\\Clean-Rooms.png",
+    "ServiceGuessedName": "CleanRooms",
+    "ServiceTypeIdentifier": "AWS::CleanRooms"
+  },
+  {
+    "Category": "Analytics",
+    "FilePath": "Analytics\\CloudSearch.png",
+    "ServiceGuessedName": "CloudSearch"
+  },
+  {
+    "Category": "Analytics",
+    "FilePath": "Analytics\\Data-Exchange.png",
+    "ServiceGuessedName": "DataExchange"
+  },
+  {
+    "Category": "Analytics",
+    "FilePath": "Analytics\\Data-Pipeline.png",
+    "ServiceGuessedName": "DataPipeline",
+    "ServiceTypeIdentifier": "AWS::DataPipeline"
+  },
+  {
+    "Category": "Analytics",
+    "FilePath": "Analytics\\DataZone.png",
+    "ServiceGuessedName": "DataZone",
+    "ServiceTypeIdentifier": "AWS::DataZone"
+  },
+  {
+    "Category": "Analytics",
+    "FilePath": "Analytics\\EMR.png",
+    "ServiceGuessedName": "EMR",
+    "ServiceTypeIdentifier": "AWS::EMR"
+  },
+  {
+    "Category": "Analytics",
+    "FilePath": "Analytics\\FinSpace.png",
+    "ServiceGuessedName": "FinSpace",
+    "ServiceTypeIdentifier": "AWS::FinSpace"
+  },
+  {
+    "Category": "Analytics",
+    "FilePath": "Analytics\\Glue-DataBrew.png",
+    "ServiceGuessedName": "GlueDataBrew",
+    "ServiceTypeIdentifier": "AWS::DataBrew"
+  },
+  {
+    "Category": "Analytics",
+    "FilePath": "Analytics\\Glue-Elastic-Views.png",
+    "ServiceGuessedName": "GlueElasticViews"
+  },
+  {
+    "Category": "Analytics",
+    "FilePath": "Analytics\\Glue.png",
+    "ServiceGuessedName": "Glue",
+    "ServiceTypeIdentifier": "AWS::Glue"
+  },
+  {
+    "Category": "Analytics",
+    "FilePath": "Analytics\\Kinesis-Data-Analytics.png",
+    "ServiceGuessedName": "KinesisDataAnalytics"
+  },
+  {
+    "Category": "Analytics",
+    "FilePath": "Analytics\\Kinesis-Data-Streams.png",
+    "ServiceGuessedName": "KinesisDataStreams"
+  },
+  {
+    "Category": "Analytics",
+    "FilePath": "Analytics\\Kinesis-Firehose.png",
+    "ServiceGuessedName": "KinesisFirehose",
+    "ServiceTypeIdentifier": "AWS::KinesisFirehose"
+  },
+  {
+    "Category": "Analytics",
+    "FilePath": "Analytics\\Kinesis-Video-Streams.png",
+    "ServiceGuessedName": "KinesisVideoStreams",
+    "ServiceTypeIdentifier": "AWS::KinesisVideo"
+  },
+  {
+    "Category": "Analytics",
+    "FilePath": "Analytics\\Kinesis.png",
+    "ServiceGuessedName": "Kinesis",
+    "ServiceTypeIdentifier": "AWS::Kinesis"
+  },
+  {
+    "Category": "Analytics",
+    "FilePath": "Analytics\\Lake-Formation.png",
+    "ServiceGuessedName": "LakeFormation",
+    "ServiceTypeIdentifier": "AWS::LakeFormation"
+  },
+  {
+    "Category": "Analytics",
+    "FilePath": "Analytics\\Managed-Streaming-for-Apache-Kafka.png",
+    "ServiceGuessedName": "ManagedStreamingforApacheKafka",
+    "ServiceTypeIdentifier": "AWS::MSK"
+  },
+  {
+    "Category": "Analytics",
+    "FilePath": "Analytics\\OpenSearch-Service.png",
+    "ServiceGuessedName": "OpenSearchService",
+    "ServiceTypeIdentifier": "AWS::OpenSearchService"
+  },
+  {
+    "Category": "Analytics",
+    "FilePath": "Analytics\\QuickSight.png",
+    "ServiceGuessedName": "QuickSight",
+    "ServiceTypeIdentifier": "AWS::QuickSight"
+  },
+  {
+    "Category": "Analytics",
+    "FilePath": "Analytics\\Redshift.png",
+    "ServiceGuessedName": "Redshift",
+    "ServiceTypeIdentifier": "AWS::Redshift"
+  },
+  {
+    "Category": "App-Integration",
+    "FilePath": "App-Integration\\API-Gateway.png",
+    "ServiceGuessedName": "APIGateway",
+    "ServiceTypeIdentifier": "AWS::ApiGateway"
+  },
+  {
+    "Category": "App-Integration",
+    "FilePath": "App-Integration\\API-Gateway.png",
+    "ServiceGuessedName": "APIGateway",
+    "ServiceTypeIdentifier": "AWS::ApiGatewayV2"
+  },
+  {
+    "Category": "App-Integration",
+    "FilePath": "App-Integration\\AppFlow.png",
+    "ServiceGuessedName": "AppFlow",
+    "ServiceTypeIdentifier": "AWS::AppFlow"
+  },
+  {
+    "Category": "App-Integration",
+    "FilePath": "App-Integration\\AppSync.png",
+    "ServiceGuessedName": "AppSync",
+    "ServiceTypeIdentifier": "AWS::AppSync"
+  },
+  {
+    "Category": "App-Integration",
+    "FilePath": "App-Integration\\Console-Mobile-Application.png",
+    "ServiceGuessedName": "ConsoleMobileApplication"
+  },
+  {
+    "Category": "App-Integration",
+    "FilePath": "App-Integration\\EventBridge.png",
+    "ServiceGuessedName": "EventBridge",
+    "ServiceTypeIdentifier": "AWS::Events"
+  },
+  {
+    "Category": "App-Integration",
+    "FilePath": "App-Integration\\Express-Workflows.png",
+    "ServiceGuessedName": "ExpressWorkflows"
+  },
+  {
+    "Category": "App-Integration",
+    "FilePath": "App-Integration\\Managed-Workflows-for-Apache-Airflow.png",
+    "ServiceGuessedName": "ManagedWorkflowsforApacheAirflow",
+    "ServiceTypeIdentifier": "AWS::MWAA"
+  },
+  {
+    "Category": "App-Integration",
+    "FilePath": "App-Integration\\MQ.png",
+    "ServiceGuessedName": "MQ"
+  },
+  {
+    "Category": "App-Integration",
+    "FilePath": "App-Integration\\Simple-Notification-Service.png",
+    "ServiceGuessedName": "SimpleNotificationService",
+    "ServiceTypeIdentifier": "AWS::SNS"
+  },
+  {
+    "Category": "App-Integration",
+    "FilePath": "App-Integration\\Simple-Queue-Service.png",
+    "ServiceGuessedName": "SimpleQueueService",
+    "ServiceTypeIdentifier": "AWS:SQS"
+  },
+  {
+    "Category": "App-Integration",
+    "FilePath": "App-Integration\\Step-Functions.png",
+    "ServiceGuessedName": "StepFunctions",
+    "ServiceTypeIdentifier": "AWS::StepFunctions"
+  },
+  {
+    "Category": "Blockchain",
+    "FilePath": "Blockchain\\Managed-Blockchain.png",
+    "ServiceGuessedName": "ManagedBlockchain",
+    "ServiceTypeIdentifier": "AWS::ManagedBlockchain"
+  },
+  {
+    "Category": "Blockchain",
+    "FilePath": "Blockchain\\Quantum-Ledger-Database.png",
+    "ServiceGuessedName": "QuantumLedgerDatabase"
+  },
+  {
+    "Category": "Business-Applications",
+    "FilePath": "Business-Applications\\Alexa-For-Business.png",
+    "ServiceGuessedName": "AlexaForBusiness"
+  },
+  {
+    "Category": "Business-Applications",
+    "FilePath": "Business-Applications\\Chime-SDK.png",
+    "ServiceGuessedName": "ChimeSDK"
+  },
+  {
+    "Category": "Business-Applications",
+    "FilePath": "Business-Applications\\Chime-Voice-Connector.png",
+    "ServiceGuessedName": "ChimeVoiceConnector"
+  },
+  {
+    "Category": "Business-Applications",
+    "FilePath": "Business-Applications\\Chime.png",
+    "ServiceGuessedName": "Chime"
+  },
+  {
+    "Category": "Business-Applications",
+    "FilePath": "Business-Applications\\Connect.png",
+    "ServiceGuessedName": "Connect",
+    "ServiceTypeIdentifier": "AWS::Connect"
+  },
+  {
+    "Category": "Business-Applications",
+    "FilePath": "Business-Applications\\Honeycode.png",
+    "ServiceGuessedName": "Honeycode"
+  },
+  {
+    "Category": "Business-Applications",
+    "FilePath": "Business-Applications\\Pinpoint-APIs.png",
+    "ServiceGuessedName": "PinpointAPIs"
+  },
+  {
+    "Category": "Business-Applications",
+    "FilePath": "Business-Applications\\Pinpoint.png",
+    "ServiceGuessedName": "Pinpoint",
+    "ServiceTypeIdentifier": "AWS::Pinpoint"
+  },
+  {
+    "Category": "Business-Applications",
+    "FilePath": "Business-Applications\\Simple-Email-Service.png",
+    "ServiceGuessedName": "SimpleEmailService",
+    "ServiceTypeIdentifier": "AWS::SES"
+  },
+  {
+    "Category": "Business-Applications",
+    "FilePath": "Business-Applications\\Supply-Chain.png",
+    "ServiceGuessedName": "SupplyChain"
+  },
+  {
+    "Category": "Business-Applications",
+    "FilePath": "Business-Applications\\Wickr.png",
+    "ServiceGuessedName": "Wickr"
+  },
+  {
+    "Category": "Business-Applications",
+    "FilePath": "Business-Applications\\WorkDocs-SDK.png",
+    "ServiceGuessedName": "WorkDocsSDK"
+  },
+  {
+    "Category": "Business-Applications",
+    "FilePath": "Business-Applications\\WorkDocs.png",
+    "ServiceGuessedName": "WorkDocs"
+  },
+  {
+    "Category": "Business-Applications",
+    "FilePath": "Business-Applications\\WorkMail.png",
+    "ServiceGuessedName": "WorkMail"
+  },
+  {
+    "Category": "Cloud-Financial-Management",
+    "FilePath": "Cloud-Financial-Management\\Application-Cost-Profiler.png",
+    "ServiceGuessedName": "ApplicationCostProfiler"
+  },
+  {
+    "Category": "Cloud-Financial-Management",
+    "FilePath": "Cloud-Financial-Management\\Billing-Conductor.png",
+    "ServiceGuessedName": "BillingConductor",
+    "ServiceTypeIdentifier": "AWS::BillingConductor"
+  },
+  {
+    "Category": "Cloud-Financial-Management",
+    "FilePath": "Cloud-Financial-Management\\Budgets.png",
+    "ServiceGuessedName": "Budgets",
+    "ServiceTypeIdentifier": "AWS::Budgets"
+  },
+  {
+    "Category": "Cloud-Financial-Management",
+    "FilePath": "Cloud-Financial-Management\\Cost-and-Usage-Report.png",
+    "ServiceGuessedName": "CostandUsageReport"
+  },
+  {
+    "Category": "Cloud-Financial-Management",
+    "FilePath": "Cloud-Financial-Management\\Cost-Explorer.png",
+    "ServiceGuessedName": "CostExplorer"
+  },
+  {
+    "Category": "Cloud-Financial-Management",
+    "FilePath": "Cloud-Financial-Management\\Reserved-Instance-Reporting.png",
+    "ServiceGuessedName": "ReservedInstanceReporting"
+  },
+  {
+    "Category": "Cloud-Financial-Management",
+    "FilePath": "Cloud-Financial-Management\\Savings-Plans.png",
+    "ServiceGuessedName": "SavingsPlans"
+  },
+  {
+    "Category": "Compute",
+    "FilePath": "Compute\\App-Runner.png",
+    "ServiceGuessedName": "AppRunner",
+    "ServiceTypeIdentifier": "AWS::AppRunner"
+  },
+  {
+    "Category": "Compute",
+    "FilePath": "Compute\\Application-Auto-Scaling.png",
+    "ServiceGuessedName": "ApplicationAutoScaling",
+    "ServiceTypeIdentifier": "AWS::ApplicationAutoScaling"
+  },
+  {
+    "Category": "Compute",
+    "FilePath": "Compute\\Batch.png",
+    "ServiceGuessedName": "Batch",
+    "ServiceTypeIdentifier": "AWS::Batch"
+  },
+  {
+    "Category": "Compute",
+    "FilePath": "Compute\\Bottlerocket.png",
+    "ServiceGuessedName": "Bottlerocket"
+  },
+  {
+    "Category": "Compute",
+    "FilePath": "Compute\\Compute-Optimizer.png",
+    "ServiceGuessedName": "ComputeOptimizer"
+  },
+  {
+    "Category": "Compute",
+    "FilePath": "Compute\\EC2-Auto-Scaling.png",
+    "ServiceGuessedName": "EC2AutoScaling",
+    "ServiceTypeIdentifier": "AWS::AutoScaling"
+  },
+  {
+    "Category": "Compute",
+    "FilePath": "Compute\\EC2-Image-Builder.png",
+    "ServiceGuessedName": "EC2ImageBuilder",
+    "ServiceTypeIdentifier": "AWS::ImageBuilder"
+  },
+  {
+    "Category": "Compute",
+    "FilePath": "Compute\\EC2.png",
+    "ServiceGuessedName": "EC2",
+    "ServiceTypeIdentifier": "AWS::EC2"
+  },
+  {
+    "Category": "Compute",
+    "FilePath": "Compute\\Elastic-Beanstalk.png",
+    "ServiceGuessedName": "ElasticBeanstalk",
+    "ServiceTypeIdentifier": "AWS::ElasticBeanstalk"
+  },
+  {
+    "Category": "Compute",
+    "FilePath": "Compute\\Elastic-Fabric-Adapter.png",
+    "ServiceGuessedName": "ElasticFabricAdapter"
+  },
+  {
+    "Category": "Compute",
+    "FilePath": "Compute\\Fargate.png",
+    "ServiceGuessedName": "Fargate"
+  },
+  {
+    "Category": "Compute",
+    "FilePath": "Compute\\Genomics-CLI.png",
+    "ServiceGuessedName": "GenomicsCLI"
+  },
+  {
+    "Category": "Compute",
+    "FilePath": "Compute\\Lambda.png",
+    "ServiceGuessedName": "Lambda",
+    "ServiceTypeIdentifier": "AWS::Lambda"
+  },
+  {
+    "Category": "Compute",
+    "FilePath": "Compute\\Lightsail.png",
+    "ServiceGuessedName": "Lightsail",
+    "ServiceTypeIdentifier": "AWS::Lightsail"
+  },
+  {
+    "Category": "Compute",
+    "FilePath": "Compute\\Local-Zones.png",
+    "ServiceGuessedName": "LocalZones"
+  },
+  {
+    "Category": "Compute",
+    "FilePath": "Compute\\NICE-DCV.png",
+    "ServiceGuessedName": "NICEDCV"
+  },
+  {
+    "Category": "Compute",
+    "FilePath": "Compute\\NICE-EnginFrame.png",
+    "ServiceGuessedName": "NICEEnginFrame"
+  },
+  {
+    "Category": "Compute",
+    "FilePath": "Compute\\Nitro-Enclaves.png",
+    "ServiceGuessedName": "NitroEnclaves"
+  },
+  {
+    "Category": "Compute",
+    "FilePath": "Compute\\Outposts-family.png",
+    "ServiceGuessedName": "Outpostsfamily"
+  },
+  {
+    "Category": "Compute",
+    "FilePath": "Compute\\Outposts-rack.png",
+    "ServiceGuessedName": "Outpostsrack"
+  },
+  {
+    "Category": "Compute",
+    "FilePath": "Compute\\Outposts-servers.png",
+    "ServiceGuessedName": "Outpostsservers"
+  },
+  {
+    "Category": "Compute",
+    "FilePath": "Compute\\ParallelCluster.png",
+    "ServiceGuessedName": "ParallelCluster"
+  },
+  {
+    "Category": "Compute",
+    "FilePath": "Compute\\Serverless-Application-Repository.png",
+    "ServiceGuessedName": "ServerlessApplicationRepository"
+  },
+  {
+    "Category": "Compute",
+    "FilePath": "Compute\\SimSpace-Weaver.png",
+    "ServiceGuessedName": "SimSpaceWeaver",
+    "ServiceTypeIdentifier": "AWS::SimSpaceWeaver"
+  },
+  {
+    "Category": "Compute",
+    "FilePath": "Compute\\Thinkbox-Deadline.png",
+    "ServiceGuessedName": "ThinkboxDeadline"
+  },
+  {
+    "Category": "Compute",
+    "FilePath": "Compute\\Thinkbox-Frost.png",
+    "ServiceGuessedName": "ThinkboxFrost"
+  },
+  {
+    "Category": "Compute",
+    "FilePath": "Compute\\Thinkbox-Krakatoa.png",
+    "ServiceGuessedName": "ThinkboxKrakatoa"
+  },
+  {
+    "Category": "Compute",
+    "FilePath": "Compute\\Thinkbox-Sequoia.png",
+    "ServiceGuessedName": "ThinkboxSequoia"
+  },
+  {
+    "Category": "Compute",
+    "FilePath": "Compute\\Thinkbox-Stoke.png",
+    "ServiceGuessedName": "ThinkboxStoke"
+  },
+  {
+    "Category": "Compute",
+    "FilePath": "Compute\\Thinkbox-XMesh.png",
+    "ServiceGuessedName": "ThinkboxXMesh"
+  },
+  {
+    "Category": "Compute",
+    "FilePath": "Compute\\VMware-Cloud-on-AWS.png",
+    "ServiceGuessedName": "VMwareCloudonAWS"
+  },
+  {
+    "Category": "Compute",
+    "FilePath": "Compute\\Wavelength.png",
+    "ServiceGuessedName": "Wavelength"
+  },
+  {
+    "Category": "Containers",
+    "FilePath": "Containers\\ECS-Anywhere.png",
+    "ServiceGuessedName": "ECSAnywhere"
+  },
+  {
+    "Category": "Containers",
+    "FilePath": "Containers\\EKS-Anywhere.png",
+    "ServiceGuessedName": "EKSAnywhere"
+  },
+  {
+    "Category": "Containers",
+    "FilePath": "Containers\\EKS-Cloud.png",
+    "ServiceGuessedName": "EKSCloud",
+    "ServiceTypeIdentifier": "AWS::ECS"
+  },
+  {
+    "Category": "Containers",
+    "FilePath": "Containers\\EKS-Distro.png",
+    "ServiceGuessedName": "EKSDistro"
+  },
+  {
+    "Category": "Containers",
+    "FilePath": "Containers\\Elastic-Container-Registry.png",
+    "ServiceGuessedName": "ElasticContainerRegistry"
+  },
+  {
+    "Category": "Containers",
+    "FilePath": "Containers\\Elastic-Container-Service.png",
+    "ServiceGuessedName": "ElasticContainerService"
+  },
+  {
+    "Category": "Containers",
+    "FilePath": "Containers\\Elastic-Kubernetes-Service.png",
+    "ServiceGuessedName": "ElasticKubernetesService"
+  },
+  {
+    "Category": "Containers",
+    "FilePath": "Containers\\Fargate.png",
+    "ServiceGuessedName": "Fargate"
+  },
+  {
+    "Category": "Containers",
+    "FilePath": "Containers\\Red-Hat-OpenShift-Service-on-AWS.png",
+    "ServiceGuessedName": "RedHatOpenShiftServiceonAWS"
+  },
+  {
+    "Category": "Customer-Enablement",
+    "FilePath": "Customer-Enablement\\Activate.png",
+    "ServiceGuessedName": "Activate"
+  },
+  {
+    "Category": "Customer-Enablement",
+    "FilePath": "Customer-Enablement\\IQ.png",
+    "ServiceGuessedName": "IQ"
+  },
+  {
+    "Category": "Customer-Enablement",
+    "FilePath": "Customer-Enablement\\Managed-Services.png",
+    "ServiceGuessedName": "ManagedServices"
+  },
+  {
+    "Category": "Customer-Enablement",
+    "FilePath": "Customer-Enablement\\Professional-Services.png",
+    "ServiceGuessedName": "ProfessionalServices"
+  },
+  {
+    "Category": "Customer-Enablement",
+    "FilePath": "Customer-Enablement\\rePost.png",
+    "ServiceGuessedName": "rePost"
+  },
+  {
+    "Category": "Customer-Enablement",
+    "FilePath": "Customer-Enablement\\Support.png",
+    "ServiceGuessedName": "Support"
+  },
+  {
+    "Category": "Customer-Enablement",
+    "FilePath": "Customer-Enablement\\Training-Certification.png",
+    "ServiceGuessedName": "TrainingCertification"
+  },
+  {
+    "Category": "Database",
+    "FilePath": "Database\\Aurora.png",
+    "ServiceGuessedName": "Aurora"
+  },
+  {
+    "Category": "Database",
+    "FilePath": "Database\\Database-Migration-Service.png",
+    "ServiceGuessedName": "DatabaseMigrationService",
+    "ServiceTypeIdentifier": "AWS::DMS"
+  },
+  {
+    "Category": "Database",
+    "FilePath": "Database\\DocumentDB.png",
+    "ServiceGuessedName": "DocumentDB",
+    "ServiceTypeIdentifier": "AWS::DocDB"
+  },
+  {
+    "Category": "Database",
+    "FilePath": "Database\\DynamoDB.png",
+    "ServiceGuessedName": "DynamoDB",
+    "ServiceTypeIdentifier": "AWS::DynamoDB"
+  },
+  {
+    "Category": "Database",
+    "FilePath": "Database\\ElastiCache.png",
+    "ServiceGuessedName": "ElastiCache",
+    "ServiceTypeIdentifier": "AWS::ElastiCache"
+  },
+  {
+    "Category": "Database",
+    "FilePath": "Database\\Keyspaces.png",
+    "ServiceGuessedName": "Keyspaces",
+    "ServiceTypeIdentifier": "AWS::Cassandra"
+  },
+  {
+    "Category": "Database",
+    "FilePath": "Database\\MemoryDB-for-Redis.png",
+    "ServiceGuessedName": "MemoryDBforRedis",
+    "ServiceTypeIdentifier": "AWS::MemoryDB"
+  },
+  {
+    "Category": "Database",
+    "FilePath": "Database\\Neptune.png",
+    "ServiceGuessedName": "Neptune",
+    "ServiceTypeIdentifier": "AWS::Neptune"
+  },
+  {
+    "Category": "Database",
+    "FilePath": "Database\\RDS-on-VMware.png",
+    "ServiceGuessedName": "RDSonVMware"
+  },
+  {
+    "Category": "Database",
+    "FilePath": "Database\\RDS.png",
+    "ServiceGuessedName": "RDS",
+    "ServiceTypeIdentifier": "AWS::RDS"
+  },
+  {
+    "Category": "Database",
+    "FilePath": "Database\\Timestream.png",
+    "ServiceGuessedName": "Timestream",
+    "ServiceTypeIdentifier": "AWS::Timestream"
+  },
+  {
+    "Category": "Developer-Tools",
+    "FilePath": "Developer-Tools\\Application-Composer.png",
+    "ServiceGuessedName": "ApplicationComposer"
+  },
+  {
+    "Category": "Developer-Tools",
+    "FilePath": "Developer-Tools\\Cloud-Control-API.png",
+    "ServiceGuessedName": "CloudControlAPI"
+  },
+  {
+    "Category": "Developer-Tools",
+    "FilePath": "Developer-Tools\\Cloud-Development-Kit.png",
+    "ServiceGuessedName": "CloudDevelopmentKit"
+  },
+  {
+    "Category": "Developer-Tools",
+    "FilePath": "Developer-Tools\\Cloud9.png",
+    "ServiceGuessedName": "Cloud9",
+    "ServiceTypeIdentifier": "AWS::Cloud9"
+  },
+  {
+    "Category": "Developer-Tools",
+    "FilePath": "Developer-Tools\\CloudShell.png",
+    "ServiceGuessedName": "CloudShell"
+  },
+  {
+    "Category": "Developer-Tools",
+    "FilePath": "Developer-Tools\\CodeArtifact.png",
+    "ServiceGuessedName": "CodeArtifact",
+    "ServiceTypeIdentifier": "AWS::CodeArtifact"
+  },
+  {
+    "Category": "Developer-Tools",
+    "FilePath": "Developer-Tools\\CodeBuild.png",
+    "ServiceGuessedName": "CodeBuild",
+    "ServiceTypeIdentifier": "AWS::CodeBuild"
+  },
+  {
+    "Category": "Developer-Tools",
+    "FilePath": "Developer-Tools\\CodeCatalyst.png",
+    "ServiceGuessedName": "CodeCatalyst"
+  },
+  {
+    "Category": "Developer-Tools",
+    "FilePath": "Developer-Tools\\CodeCommit.png",
+    "ServiceGuessedName": "CodeCommit",
+    "ServiceTypeIdentifier": "AWS::CodeCommit"
+  },
+  {
+    "Category": "Developer-Tools",
+    "FilePath": "Developer-Tools\\CodeDeploy.png",
+    "ServiceGuessedName": "CodeDeploy",
+    "ServiceTypeIdentifier": "AWS::CodeDeploy"
+  },
+  {
+    "Category": "Developer-Tools",
+    "FilePath": "Developer-Tools\\CodePipeline.png",
+    "ServiceGuessedName": "CodePipeline",
+    "ServiceTypeIdentifier": "AWS::CodePipeline"
+  },
+  {
+    "Category": "Developer-Tools",
+    "FilePath": "Developer-Tools\\CodeStar.png",
+    "ServiceGuessedName": "CodeStar",
+    "ServiceTypeIdentifier": "AWS::CodeStar"
+  },
+  {
+    "Category": "Developer-Tools",
+    "FilePath": "Developer-Tools\\Command-Line-Interface.png",
+    "ServiceGuessedName": "CommandLineInterface"
+  },
+  {
+    "Category": "Developer-Tools",
+    "FilePath": "Developer-Tools\\Corretto.png",
+    "ServiceGuessedName": "Corretto"
+  },
+  {
+    "Category": "Developer-Tools",
+    "FilePath": "Developer-Tools\\Tools-and-SDKs.png",
+    "ServiceGuessedName": "ToolsandSDKs"
+  },
+  {
+    "Category": "Developer-Tools",
+    "FilePath": "Developer-Tools\\X-Ray.png",
+    "ServiceGuessedName": "XRay",
+    "ServiceTypeIdentifier": "AWS::XRay"
+  },
+  {
+    "Category": "End-User-Computing",
+    "FilePath": "End-User-Computing\\AppStream.png",
+    "ServiceGuessedName": "AppStream",
+    "ServiceTypeIdentifier": "AWS::AppStream"
+  },
+  {
+    "Category": "End-User-Computing",
+    "FilePath": "End-User-Computing\\WorkLink.png",
+    "ServiceGuessedName": "WorkLink"
+  },
+  {
+    "Category": "End-User-Computing",
+    "FilePath": "End-User-Computing\\WorkSpaces-Family.png",
+    "ServiceGuessedName": "WorkSpacesFamily"
+  },
+  {
+    "Category": "Front-End-Web-Mobile",
+    "FilePath": "Front-End-Web-Mobile\\Amplify.png",
+    "ServiceGuessedName": "Amplify",
+    "ServiceTypeIdentifier": "AWS::Amplify"
+  },
+  {
+    "Category": "Front-End-Web-Mobile",
+    "FilePath": "Front-End-Web-Mobile\\Device-Farm.png",
+    "ServiceGuessedName": "DeviceFarm",
+    "ServiceTypeIdentifier": "AWS::DeviceFarm"
+  },
+  {
+    "Category": "Front-End-Web-Mobile",
+    "FilePath": "Front-End-Web-Mobile\\Location-Service.png",
+    "ServiceGuessedName": "LocationService"
+  },
+  {
+    "Category": "Games",
+    "FilePath": "Games\\GameKit.png",
+    "ServiceGuessedName": "GameKit"
+  },
+  {
+    "Category": "Games",
+    "FilePath": "Games\\GameLift.png",
+    "ServiceGuessedName": "GameLift",
+    "ServiceTypeIdentifier": "AWS::GameLift"
+  },
+  {
+    "Category": "Games",
+    "FilePath": "Games\\GameSparks.png",
+    "ServiceGuessedName": "GameSparks"
+  },
+  {
+    "Category": "Games",
+    "FilePath": "Games\\Lumberyard.png",
+    "ServiceGuessedName": "Lumberyard"
+  },
+  {
+    "Category": "Games",
+    "FilePath": "Games\\Open-3D-Engine.png",
+    "ServiceGuessedName": "Open3DEngine"
+  },
+  {
+    "Category": "General-Icons",
+    "FilePath": "General-Icons\\Marketplace_Dark.png",
+    "ServiceGuessedName": "Marketplace_Dark"
+  },
+  {
+    "Category": "General-Icons",
+    "FilePath": "General-Icons\\Marketplace_Light.png",
+    "ServiceGuessedName": "Marketplace_Light"
+  },
+  {
+    "Category": "Internet-of-Things",
+    "FilePath": "Internet-of-Things\\FreeRTOS.png",
+    "ServiceGuessedName": "FreeRTOS"
+  },
+  {
+    "Category": "Internet-of-Things",
+    "FilePath": "Internet-of-Things\\IoT-1-Click.png",
+    "ServiceGuessedName": "IoT1Click",
+    "ServiceTypeIdentifier": "AWS::IoT1Click"
+  },
+  {
+    "Category": "Internet-of-Things",
+    "FilePath": "Internet-of-Things\\IoT-Analytics.png",
+    "ServiceGuessedName": "IoTAnalytics",
+    "ServiceTypeIdentifier": "AWS::IoTAnalytics"
+  },
+  {
+    "Category": "Internet-of-Things",
+    "FilePath": "Internet-of-Things\\IoT-Button.png",
+    "ServiceGuessedName": "IoTButton"
+  },
+  {
+    "Category": "Internet-of-Things",
+    "FilePath": "Internet-of-Things\\IoT-Core.png",
+    "ServiceGuessedName": "IoTCore"
+  },
+  {
+    "Category": "Internet-of-Things",
+    "FilePath": "Internet-of-Things\\IoT-Device-Defender.png",
+    "ServiceGuessedName": "IoTDeviceDefender"
+  },
+  {
+    "Category": "Internet-of-Things",
+    "FilePath": "Internet-of-Things\\IoT-Device-Management.png",
+    "ServiceGuessedName": "IoTDeviceManagement"
+  },
+  {
+    "Category": "Internet-of-Things",
+    "FilePath": "Internet-of-Things\\IoT-EduKit.png",
+    "ServiceGuessedName": "IoTEduKit"
+  },
+  {
+    "Category": "Internet-of-Things",
+    "FilePath": "Internet-of-Things\\IoT-Events.png",
+    "ServiceGuessedName": "IoTEvents",
+    "ServiceTypeIdentifier": "AWS::IoTEvents"
+  },
+  {
+    "Category": "Internet-of-Things",
+    "FilePath": "Internet-of-Things\\IoT-ExpressLink.png",
+    "ServiceGuessedName": "IoTExpressLink"
+  },
+  {
+    "Category": "Internet-of-Things",
+    "FilePath": "Internet-of-Things\\IoT-FleetWise.png",
+    "ServiceGuessedName": "IoTFleetWise",
+    "ServiceTypeIdentifier": "AWS::IoTFleetWise"
+  },
+  {
+    "Category": "Internet-of-Things",
+    "FilePath": "Internet-of-Things\\IoT-Greengrass.png",
+    "ServiceGuessedName": "IoTGreengrass",
+    "ServiceTypeIdentifier": "AWS::Greengrass"
+  },
+  {
+    "Category": "Internet-of-Things",
+    "FilePath": "Internet-of-Things\\IoT-Greengrass.png",
+    "ServiceGuessedName": "IoTGreengrass",
+    "ServiceTypeIdentifier": "AWS::GreengrassV2"
+  },
+  {
+    "Category": "Internet-of-Things",
+    "FilePath": "Internet-of-Things\\IoT-RoboRunner.png",
+    "ServiceGuessedName": "IoTRoboRunner"
+  },
+  {
+    "Category": "Internet-of-Things",
+    "FilePath": "Internet-of-Things\\IoT-SiteWise.png",
+    "ServiceGuessedName": "IoTSiteWise",
+    "ServiceTypeIdentifier": "AWS::IoTSiteWise"
+  },
+  {
+    "Category": "Internet-of-Things",
+    "FilePath": "Internet-of-Things\\IoT-Things-Graph.png",
+    "ServiceGuessedName": "IoTThingsGraph"
+  },
+  {
+    "Category": "Internet-of-Things",
+    "FilePath": "Internet-of-Things\\IoT-TwinMaker.png",
+    "ServiceGuessedName": "IoTTwinMaker",
+    "ServiceTypeIdentifier": "AWS::IoTTwinMaker"
+  },
+  {
+    "Category": "Machine-Learning",
+    "FilePath": "Machine-Learning\\Apache-MXNet-on-AWS.png",
+    "ServiceGuessedName": "ApacheMXNetonAWS"
+  },
+  {
+    "Category": "Machine-Learning",
+    "FilePath": "Machine-Learning\\Augmented-AI-A2I.png",
+    "ServiceGuessedName": "AugmentedAIA2I"
+  },
+  {
+    "Category": "Machine-Learning",
+    "FilePath": "Machine-Learning\\CodeGuru.png",
+    "ServiceGuessedName": "CodeGuru"
+  },
+  {
+    "Category": "Machine-Learning",
+    "FilePath": "Machine-Learning\\CodeWhisperer.png",
+    "ServiceGuessedName": "CodeWhisperer"
+  },
+  {
+    "Category": "Machine-Learning",
+    "FilePath": "Machine-Learning\\Comprehend-Medical.png",
+    "ServiceGuessedName": "ComprehendMedical"
+  },
+  {
+    "Category": "Machine-Learning",
+    "FilePath": "Machine-Learning\\Comprehend.png",
+    "ServiceGuessedName": "Comprehend",
+    "ServiceTypeIdentifier": "AWS::Comprehend"
+  },
+  {
+    "Category": "Machine-Learning",
+    "FilePath": "Machine-Learning\\Deep-Learning-AMIs.png",
+    "ServiceGuessedName": "DeepLearningAMIs"
+  },
+  {
+    "Category": "Machine-Learning",
+    "FilePath": "Machine-Learning\\Deep-Learning-Containers.png",
+    "ServiceGuessedName": "DeepLearningContainers"
+  },
+  {
+    "Category": "Machine-Learning",
+    "FilePath": "Machine-Learning\\DeepComposer.png",
+    "ServiceGuessedName": "DeepComposer"
+  },
+  {
+    "Category": "Machine-Learning",
+    "FilePath": "Machine-Learning\\DeepLens.png",
+    "ServiceGuessedName": "DeepLens"
+  },
+  {
+    "Category": "Machine-Learning",
+    "FilePath": "Machine-Learning\\DeepRacer.png",
+    "ServiceGuessedName": "DeepRacer"
+  },
+  {
+    "Category": "Machine-Learning",
+    "FilePath": "Machine-Learning\\DevOps-Guru.png",
+    "ServiceGuessedName": "DevOpsGuru",
+    "ServiceTypeIdentifier": "AWS::DevOpsGuru"
+  },
+  {
+    "Category": "Machine-Learning",
+    "FilePath": "Machine-Learning\\Elastic-Inference.png",
+    "ServiceGuessedName": "ElasticInference"
+  },
+  {
+    "Category": "Machine-Learning",
+    "FilePath": "Machine-Learning\\Forecast.png",
+    "ServiceGuessedName": "Forecast",
+    "ServiceTypeIdentifier": "AWS::Forecast"
+  },
+  {
+    "Category": "Machine-Learning",
+    "FilePath": "Machine-Learning\\Fraud-Detector.png",
+    "ServiceGuessedName": "FraudDetector",
+    "ServiceTypeIdentifier": "AWS::FraudDetector"
+  },
+  {
+    "Category": "Machine-Learning",
+    "FilePath": "Machine-Learning\\HealthLake.png",
+    "ServiceGuessedName": "HealthLake",
+    "ServiceTypeIdentifier": "AWS::HealthLake"
+  },
+  {
+    "Category": "Machine-Learning",
+    "FilePath": "Machine-Learning\\Kendra.png",
+    "ServiceGuessedName": "Kendra",
+    "ServiceTypeIdentifier": "AWS::Kendra"
+  },
+  {
+    "Category": "Machine-Learning",
+    "FilePath": "Machine-Learning\\Lex.png",
+    "ServiceGuessedName": "Lex",
+    "ServiceTypeIdentifier": "AWS::Lex"
+  },
+  {
+    "Category": "Machine-Learning",
+    "FilePath": "Machine-Learning\\Lookout-for-Equipment.png",
+    "ServiceGuessedName": "LookoutforEquipment"
+  },
+  {
+    "Category": "Machine-Learning",
+    "FilePath": "Machine-Learning\\Lookout-for-Metrics.png",
+    "ServiceGuessedName": "LookoutforMetrics"
+  },
+  {
+    "Category": "Machine-Learning",
+    "FilePath": "Machine-Learning\\Lookout-for-Vision.png",
+    "ServiceGuessedName": "LookoutforVision"
+  },
+  {
+    "Category": "Machine-Learning",
+    "FilePath": "Machine-Learning\\Monitron.png",
+    "ServiceGuessedName": "Monitron"
+  },
+  {
+    "Category": "Machine-Learning",
+    "FilePath": "Machine-Learning\\Neuron.png",
+    "ServiceGuessedName": "Neuron"
+  },
+  {
+    "Category": "Machine-Learning",
+    "FilePath": "Machine-Learning\\Omics.png",
+    "ServiceGuessedName": "Omics",
+    "ServiceTypeIdentifier": "AWS::Omics"
+  },
+  {
+    "Category": "Machine-Learning",
+    "FilePath": "Machine-Learning\\Panorama.png",
+    "ServiceGuessedName": "Panorama",
+    "ServiceTypeIdentifier": "AWS::Panorama"
+  },
+  {
+    "Category": "Machine-Learning",
+    "FilePath": "Machine-Learning\\Personalize.png",
+    "ServiceGuessedName": "Personalize",
+    "ServiceTypeIdentifier": "AWS::Personalize"
+  },
+  {
+    "Category": "Machine-Learning",
+    "FilePath": "Machine-Learning\\Polly.png",
+    "ServiceGuessedName": "Polly"
+  },
+  {
+    "Category": "Machine-Learning",
+    "FilePath": "Machine-Learning\\Rekognition.png",
+    "ServiceGuessedName": "Rekognition",
+    "ServiceTypeIdentifier": "AWS::Rekognition"
+  },
+  {
+    "Category": "Machine-Learning",
+    "FilePath": "Machine-Learning\\SageMaker-Ground-Truth.png",
+    "ServiceGuessedName": "SageMakerGroundTruth"
+  },
+  {
+    "Category": "Machine-Learning",
+    "FilePath": "Machine-Learning\\SageMaker-Studio-Lab.png",
+    "ServiceGuessedName": "SageMakerStudioLab"
+  },
+  {
+    "Category": "Machine-Learning",
+    "FilePath": "Machine-Learning\\SageMaker.png",
+    "ServiceGuessedName": "SageMaker",
+    "ServiceTypeIdentifier": "AWS::SageMaker"
+  },
+  {
+    "Category": "Machine-Learning",
+    "FilePath": "Machine-Learning\\TensorFlow-on-AWS.png",
+    "ServiceGuessedName": "TensorFlowonAWS"
+  },
+  {
+    "Category": "Machine-Learning",
+    "FilePath": "Machine-Learning\\Textract.png",
+    "ServiceGuessedName": "Textract"
+  },
+  {
+    "Category": "Machine-Learning",
+    "FilePath": "Machine-Learning\\TorchServe.png",
+    "ServiceGuessedName": "TorchServe"
+  },
+  {
+    "Category": "Machine-Learning",
+    "FilePath": "Machine-Learning\\Transcribe.png",
+    "ServiceGuessedName": "Transcribe"
+  },
+  {
+    "Category": "Machine-Learning",
+    "FilePath": "Machine-Learning\\Translate.png",
+    "ServiceGuessedName": "Translate"
+  },
+  {
+    "Category": "Management-Governance",
+    "FilePath": "Management-Governance\\AppConfig.png",
+    "ServiceGuessedName": "AppConfig",
+    "ServiceTypeIdentifier": "AWS::AppConfig"
+  },
+  {
+    "Category": "Management-Governance",
+    "FilePath": "Management-Governance\\Application-Auto-Scaling.png",
+    "ServiceGuessedName": "ApplicationAutoScaling",
+    "ServiceTypeIdentifier": "AWS::ApplicationAutoScaling"
+  },
+  {
+    "Category": "Management-Governance",
+    "FilePath": "Management-Governance\\Auto-Scaling.png",
+    "ServiceGuessedName": "AutoScaling",
+    "ServiceTypeIdentifier": "AWS::AutoScalingPlans"
+  },
+  {
+    "Category": "Management-Governance",
+    "FilePath": "Management-Governance\\Backint-Agent.png",
+    "ServiceGuessedName": "BackintAgent"
+  },
+  {
+    "Category": "Management-Governance",
+    "FilePath": "Management-Governance\\Chatbot.png",
+    "ServiceGuessedName": "Chatbot",
+    "ServiceTypeIdentifier": "AWS::Chatbot"
+  },
+  {
+    "Category": "Management-Governance",
+    "FilePath": "Management-Governance\\CloudFormation.png",
+    "ServiceGuessedName": "CloudFormation",
+    "ServiceTypeIdentifier": "AWS::CloudFormation"
+  },
+  {
+    "Category": "Management-Governance",
+    "FilePath": "Management-Governance\\CloudTrail.png",
+    "ServiceGuessedName": "CloudTrail",
+    "ServiceTypeIdentifier": "AWS::CloudTrail"
+  },
+  {
+    "Category": "Management-Governance",
+    "FilePath": "Management-Governance\\CloudWatch.png",
+    "ServiceGuessedName": "CloudWatch",
+    "ServiceTypeIdentifier": "AWS::CloudWatch"
+  },
+  {
+    "Category": "Management-Governance",
+    "FilePath": "Management-Governance\\Config.png",
+    "ServiceGuessedName": "Config",
+    "ServiceTypeIdentifier": "AWS::Config"
+  },
+  {
+    "Category": "Management-Governance",
+    "FilePath": "Management-Governance\\Control-Tower.png",
+    "ServiceGuessedName": "ControlTower",
+    "ServiceTypeIdentifier": "AWS::ControlTower"
+  },
+  {
+    "Category": "Management-Governance",
+    "FilePath": "Management-Governance\\Distro-for-OpenTelemetry.png",
+    "ServiceGuessedName": "DistroforOpenTelemetry"
+  },
+  {
+    "Category": "Management-Governance",
+    "FilePath": "Management-Governance\\Fault-Injection-Simulator.png",
+    "ServiceGuessedName": "FaultInjectionSimulator",
+    "ServiceTypeIdentifier": "AWS::FIS"
+  },
+  {
+    "Category": "Management-Governance",
+    "FilePath": "Management-Governance\\Launch-Wizard.png",
+    "ServiceGuessedName": "LaunchWizard",
+    "ServiceTypeIdentifier": "AWS::LaunchWizard"
+  },
+  {
+    "Category": "Management-Governance",
+    "FilePath": "Management-Governance\\License-Manager.png",
+    "ServiceGuessedName": "LicenseManager",
+    "ServiceTypeIdentifier": "AWS::LicenseManager"
+  },
+  {
+    "Category": "Management-Governance",
+    "FilePath": "Management-Governance\\Managed-Grafana.png",
+    "ServiceGuessedName": "ManagedGrafana",
+    "ServiceTypeIdentifier": "AWS::Grafana"
+  },
+  {
+    "Category": "Management-Governance",
+    "FilePath": "Management-Governance\\Managed-Service-for-Prometheus.png",
+    "ServiceGuessedName": "ManagedServiceforPrometheus",
+    "ServiceTypeIdentifier": "AWS::APS"
+  },
+  {
+    "Category": "Management-Governance",
+    "FilePath": "Management-Governance\\Management-Console.png",
+    "ServiceGuessedName": "ManagementConsole"
+  },
+  {
+    "Category": "Management-Governance",
+    "FilePath": "Management-Governance\\OpsWorks.png",
+    "ServiceGuessedName": "OpsWorks",
+    "ServiceTypeIdentifier": "AWS::OpsWorks"
+  },
+  {
+    "Category": "Management-Governance",
+    "FilePath": "Management-Governance\\Organizations.png",
+    "ServiceGuessedName": "Organizations",
+    "ServiceTypeIdentifier": "AWS::Organizations"
+  },
+  {
+    "Category": "Management-Governance",
+    "FilePath": "Management-Governance\\Personal-Health-Dashboard.png",
+    "ServiceGuessedName": "PersonalHealthDashboard"
+  },
+  {
+    "Category": "Management-Governance",
+    "FilePath": "Management-Governance\\Proton.png",
+    "ServiceGuessedName": "Proton",
+    "ServiceTypeIdentifier": "AWS::Proton"
+  },
+  {
+    "Category": "Management-Governance",
+    "FilePath": "Management-Governance\\Resilience-Hub.png",
+    "ServiceGuessedName": "ResilienceHub",
+    "ServiceTypeIdentifier": "AWS::ResilienceHub"
+  },
+  {
+    "Category": "Management-Governance",
+    "FilePath": "Management-Governance\\Resource-Explorer.png",
+    "ServiceGuessedName": "ResourceExplorer",
+    "ServiceTypeIdentifier": "AWS::ResourceExplorer2"
+  },
+  {
+    "Category": "Management-Governance",
+    "FilePath": "Management-Governance\\Service-Catalog.png",
+    "ServiceGuessedName": "ServiceCatalog",
+    "ServiceTypeIdentifier": "AWS::ServiceCatalog"
+  },
+  {
+    "Category": "Management-Governance",
+    "FilePath": "Management-Governance\\Service-Management-Connector.png",
+    "ServiceGuessedName": "ServiceManagementConnector"
+  },
+  {
+    "Category": "Management-Governance",
+    "FilePath": "Management-Governance\\Systems-Manager.png",
+    "ServiceGuessedName": "SystemsManager",
+    "ServiceTypeIdentifier": "AWS::SSM"
+  },
+  {
+    "Category": "Management-Governance",
+    "FilePath": "Management-Governance\\Trusted-Advisor.png",
+    "ServiceGuessedName": "TrustedAdvisor"
+  },
+  {
+    "Category": "Management-Governance",
+    "FilePath": "Management-Governance\\Well-Architected-Tool.png",
+    "ServiceGuessedName": "WellArchitectedTool"
+  },
+  {
+    "Category": "Media-Services",
+    "FilePath": "Media-Services\\Elastic-Transcoder.png",
+    "ServiceGuessedName": "ElasticTranscoder"
+  },
+  {
+    "Category": "Media-Services",
+    "FilePath": "Media-Services\\Elemental-Appliances-&-Software.png",
+    "ServiceGuessedName": "ElementalAppliances&Software"
+  },
+  {
+    "Category": "Media-Services",
+    "FilePath": "Media-Services\\Elemental-Conductor.png",
+    "ServiceGuessedName": "ElementalConductor"
+  },
+  {
+    "Category": "Media-Services",
+    "FilePath": "Media-Services\\Elemental-Delta.png",
+    "ServiceGuessedName": "ElementalDelta"
+  },
+  {
+    "Category": "Media-Services",
+    "FilePath": "Media-Services\\Elemental-Link.png",
+    "ServiceGuessedName": "ElementalLink"
+  },
+  {
+    "Category": "Media-Services",
+    "FilePath": "Media-Services\\Elemental-Live.png",
+    "ServiceGuessedName": "ElementalLive"
+  },
+  {
+    "Category": "Media-Services",
+    "FilePath": "Media-Services\\Elemental-MediaConnect.png",
+    "ServiceGuessedName": "ElementalMediaConnect",
+    "ServiceTypeIdentifier": "AWS::MediaConnect"
+  },
+  {
+    "Category": "Media-Services",
+    "FilePath": "Media-Services\\Elemental-MediaConvert.png",
+    "ServiceGuessedName": "ElementalMediaConvert",
+    "ServiceTypeIdentifier": "AWS::MediaConvert"
+  },
+  {
+    "Category": "Media-Services",
+    "FilePath": "Media-Services\\Elemental-MediaLive.png",
+    "ServiceGuessedName": "ElementalMediaLive",
+    "ServiceTypeIdentifier": "AWS::MediaLive"
+  },
+  {
+    "Category": "Media-Services",
+    "FilePath": "Media-Services\\Elemental-MediaPackage.png",
+    "ServiceGuessedName": "ElementalMediaPackage",
+    "ServiceTypeIdentifier": "AWS::MediaPackage"
+  },
+  {
+    "Category": "Media-Services",
+    "FilePath": "Media-Services\\Elemental-MediaPackage.png",
+    "ServiceGuessedName": "ElementalMediaPackage",
+    "ServiceTypeIdentifier": "AWS::MediaPackageV2"
+  },
+  {
+    "Category": "Media-Services",
+    "FilePath": "Media-Services\\Elemental-MediaStore.png",
+    "ServiceGuessedName": "ElementalMediaStore",
+    "ServiceTypeIdentifier": "AWS::MediaStore"
+  },
+  {
+    "Category": "Media-Services",
+    "FilePath": "Media-Services\\Elemental-MediaTailor.png",
+    "ServiceGuessedName": "ElementalMediaTailor",
+    "ServiceTypeIdentifier": "AWS::MediaTailor"
+  },
+  {
+    "Category": "Media-Services",
+    "FilePath": "Media-Services\\Elemental-Server.png",
+    "ServiceGuessedName": "ElementalServer"
+  },
+  {
+    "Category": "Media-Services",
+    "FilePath": "Media-Services\\Interactive-Video-Service.png",
+    "ServiceGuessedName": "InteractiveVideoService"
+  },
+  {
+    "Category": "Media-Services",
+    "FilePath": "Media-Services\\Kinesis-Video-Streams.png",
+    "ServiceGuessedName": "KinesisVideoStreams",
+    "ServiceTypeIdentifier": "AWS::KinesisVideo"
+  },
+  {
+    "Category": "Media-Services",
+    "FilePath": "Media-Services\\Nimble-Studio.png",
+    "ServiceGuessedName": "NimbleStudio",
+    "ServiceTypeIdentifier": "AWS::NimbleStudio"
+  },
+  {
+    "Category": "Migration-Transfer",
+    "FilePath": "Migration-Transfer\\Application-Discovery-Service.png",
+    "ServiceGuessedName": "ApplicationDiscoveryService"
+  },
+  {
+    "Category": "Migration-Transfer",
+    "FilePath": "Migration-Transfer\\Application-Migration-Service.png",
+    "ServiceGuessedName": "ApplicationMigrationService"
+  },
+  {
+    "Category": "Migration-Transfer",
+    "FilePath": "Migration-Transfer\\DataSync.png",
+    "ServiceGuessedName": "DataSync",
+    "ServiceTypeIdentifier": "AWS::DataSync"
+  },
+  {
+    "Category": "Migration-Transfer",
+    "FilePath": "Migration-Transfer\\Mainframe-Modernization.png",
+    "ServiceGuessedName": "MainframeModernization"
+  },
+  {
+    "Category": "Migration-Transfer",
+    "FilePath": "Migration-Transfer\\Migration-Evaluator.png",
+    "ServiceGuessedName": "MigrationEvaluator"
+  },
+  {
+    "Category": "Migration-Transfer",
+    "FilePath": "Migration-Transfer\\Migration-Hub.png",
+    "ServiceGuessedName": "MigrationHub"
+  },
+  {
+    "Category": "Migration-Transfer",
+    "FilePath": "Migration-Transfer\\Server-Migration-Service.png",
+    "ServiceGuessedName": "ServerMigrationService"
+  },
+  {
+    "Category": "Migration-Transfer",
+    "FilePath": "Migration-Transfer\\Transfer-Family.png",
+    "ServiceGuessedName": "TransferFamily",
+    "ServiceTypeIdentifier": "AWS::Transfer"
+  },
+  {
+    "Category": "Networking-Content-Delivery",
+    "FilePath": "Networking-Content-Delivery\\App-Mesh.png",
+    "ServiceGuessedName": "AppMesh",
+    "ServiceTypeIdentifier": "AWS::AppMesh"
+  },
+  {
+    "Category": "Networking-Content-Delivery",
+    "FilePath": "Networking-Content-Delivery\\Client-VPN.png",
+    "ServiceGuessedName": "ClientVPN"
+  },
+  {
+    "Category": "Networking-Content-Delivery",
+    "FilePath": "Networking-Content-Delivery\\Cloud-Directory.png",
+    "ServiceGuessedName": "CloudDirectory"
+  },
+  {
+    "Category": "Networking-Content-Delivery",
+    "FilePath": "Networking-Content-Delivery\\Cloud-Map.png",
+    "ServiceGuessedName": "CloudMap",
+    "ServiceTypeIdentifier": "AWS::ServiceDiscovery"
+  },
+  {
+    "Category": "Networking-Content-Delivery",
+    "FilePath": "Networking-Content-Delivery\\Cloud-WAN.png",
+    "ServiceGuessedName": "CloudWAN"
+  },
+  {
+    "Category": "Networking-Content-Delivery",
+    "FilePath": "Networking-Content-Delivery\\CloudFront.png",
+    "ServiceGuessedName": "CloudFront",
+    "ServiceTypeIdentifier": "AWS::CloudFront"
+  },
+  {
+    "Category": "Networking-Content-Delivery",
+    "FilePath": "Networking-Content-Delivery\\Direct-Connect.png",
+    "ServiceGuessedName": "DirectConnect"
+  },
+  {
+    "Category": "Networking-Content-Delivery",
+    "FilePath": "Networking-Content-Delivery\\Elastic-Load-Balancing.png",
+    "ServiceGuessedName": "ElasticLoadBalancing",
+    "ServiceTypeIdentifier": "AWS::ElasticLoadBalancing"
+  },
+  {
+    "Category": "Networking-Content-Delivery",
+    "FilePath": "Networking-Content-Delivery\\Global-Accelerator.png",
+    "ServiceGuessedName": "GlobalAccelerator",
+    "ServiceTypeIdentifier": "AWS::GlobalAccelerator"
+  },
+  {
+    "Category": "Networking-Content-Delivery",
+    "FilePath": "Networking-Content-Delivery\\Private-5G.png",
+    "ServiceGuessedName": "Private5G"
+  },
+  {
+    "Category": "Networking-Content-Delivery",
+    "FilePath": "Networking-Content-Delivery\\PrivateLink.png",
+    "ServiceGuessedName": "PrivateLink"
+  },
+  {
+    "Category": "Networking-Content-Delivery",
+    "FilePath": "Networking-Content-Delivery\\Route-53.png",
+    "ServiceGuessedName": "Route53",
+    "ServiceTypeIdentifier": "AWS::Route53"
+  },
+  {
+    "Category": "Networking-Content-Delivery",
+    "FilePath": "Networking-Content-Delivery\\Site-to-Site-VPN.png",
+    "ServiceGuessedName": "SitetoSiteVPN"
+  },
+  {
+    "Category": "Networking-Content-Delivery",
+    "FilePath": "Networking-Content-Delivery\\Transit-Gateway.png",
+    "ServiceGuessedName": "TransitGateway"
+  },
+  {
+    "Category": "Networking-Content-Delivery",
+    "FilePath": "Networking-Content-Delivery\\Verified-Access.png",
+    "ServiceGuessedName": "VerifiedAccess"
+  },
+  {
+    "Category": "Networking-Content-Delivery",
+    "FilePath": "Networking-Content-Delivery\\Virtual-Private-Cloud.png",
+    "ServiceGuessedName": "VirtualPrivateCloud"
+  },
+  {
+    "Category": "Networking-Content-Delivery",
+    "FilePath": "Networking-Content-Delivery\\VPC-Lattice.png",
+    "ServiceGuessedName": "VPCLattice",
+    "ServiceTypeIdentifier": "AWS::VpcLattice"
+  },
+  {
+    "Category": "Quantum-Technologies",
+    "FilePath": "Quantum-Technologies\\Braket.png",
+    "ServiceGuessedName": "Braket"
+  },
+  {
+    "Category": "Robotics",
+    "FilePath": "Robotics\\RoboMaker.png",
+    "ServiceGuessedName": "RoboMaker",
+    "ServiceTypeIdentifier": "AWS::RoboMaker"
+  },
+  {
+    "Category": "Satellite",
+    "FilePath": "Satellite\\Ground-Station.png",
+    "ServiceGuessedName": "GroundStation",
+    "ServiceTypeIdentifier": "AWS::GroundStation"
+  },
+  {
+    "Category": "Security-Identity-Compliance",
+    "FilePath": "Security-Identity-Compliance\\Artifact.png",
+    "ServiceGuessedName": "Artifact"
+  },
+  {
+    "Category": "Security-Identity-Compliance",
+    "FilePath": "Security-Identity-Compliance\\Audit-Manager.png",
+    "ServiceGuessedName": "AuditManager",
+    "ServiceTypeIdentifier": "AWS::AuditManager"
+  },
+  {
+    "Category": "Security-Identity-Compliance",
+    "FilePath": "Security-Identity-Compliance\\Certificate-Manager.png",
+    "ServiceGuessedName": "CertificateManager",
+    "ServiceTypeIdentifier": "AWS::CertificateManager"
+  },
+  {
+    "Category": "Security-Identity-Compliance",
+    "FilePath": "Security-Identity-Compliance\\Cloud-Directory.png",
+    "ServiceGuessedName": "CloudDirectory"
+  },
+  {
+    "Category": "Security-Identity-Compliance",
+    "FilePath": "Security-Identity-Compliance\\CloudHSM.png",
+    "ServiceGuessedName": "CloudHSM"
+  },
+  {
+    "Category": "Security-Identity-Compliance",
+    "FilePath": "Security-Identity-Compliance\\Cognito.png",
+    "ServiceGuessedName": "Cognito",
+    "ServiceTypeIdentifier": "AWS::Cognito"
+  },
+  {
+    "Category": "Security-Identity-Compliance",
+    "FilePath": "Security-Identity-Compliance\\Detective.png",
+    "ServiceGuessedName": "Detective",
+    "ServiceTypeIdentifier": "AWS::Detective"
+  },
+  {
+    "Category": "Security-Identity-Compliance",
+    "FilePath": "Security-Identity-Compliance\\Directory-Service.png",
+    "ServiceGuessedName": "DirectoryService",
+    "ServiceTypeIdentifier": "AWS::DirectoryService"
+  },
+  {
+    "Category": "Security-Identity-Compliance",
+    "FilePath": "Security-Identity-Compliance\\Firewall-Manager.png",
+    "ServiceGuessedName": "FirewallManager",
+    "ServiceTypeIdentifier": "AWS::FMS"
+  },
+  {
+    "Category": "Security-Identity-Compliance",
+    "FilePath": "Security-Identity-Compliance\\GuardDuty.png",
+    "ServiceGuessedName": "GuardDuty",
+    "ServiceTypeIdentifier": "AWS::GuardDuty"
+  },
+  {
+    "Category": "Security-Identity-Compliance",
+    "FilePath": "Security-Identity-Compliance\\IAM-Identity-Center.png",
+    "ServiceGuessedName": "IAMIdentityCenter",
+    "ServiceTypeIdentifier": "AWS::SSO"
+  },
+  {
+    "Category": "Security-Identity-Compliance",
+    "FilePath": "Security-Identity-Compliance\\Identity-and-Access-Management.png",
+    "ServiceGuessedName": "IdentityandAccessManagement",
+    "ServiceTypeIdentifier": "AWS::IAM"
+  },
+  {
+    "Category": "Security-Identity-Compliance",
+    "FilePath": "Security-Identity-Compliance\\Inspector.png",
+    "ServiceGuessedName": "Inspector",
+    "ServiceTypeIdentifier": "AWS::Inspector"
+  },
+  {
+    "Category": "Security-Identity-Compliance",
+    "FilePath": "Security-Identity-Compliance\\Key-Management-Service.png",
+    "ServiceGuessedName": "KeyManagementService",
+    "ServiceTypeIdentifier": "AWS::KMS"
+  },
+  {
+    "Category": "Security-Identity-Compliance",
+    "FilePath": "Security-Identity-Compliance\\Macie.png",
+    "ServiceGuessedName": "Macie",
+    "ServiceTypeIdentifier": "AWS::Macie"
+  },
+  {
+    "Category": "Security-Identity-Compliance",
+    "FilePath": "Security-Identity-Compliance\\Network-Firewall.png",
+    "ServiceGuessedName": "NetworkFirewall",
+    "ServiceTypeIdentifier": "AWS::NetworkFirewall"
+  },
+  {
+    "Category": "Security-Identity-Compliance",
+    "FilePath": "Security-Identity-Compliance\\Private-Certificate-Authority.png",
+    "ServiceGuessedName": "PrivateCertificateAuthority"
+  },
+  {
+    "Category": "Security-Identity-Compliance",
+    "FilePath": "Security-Identity-Compliance\\Resource-Access-Manager.png",
+    "ServiceGuessedName": "ResourceAccessManager",
+    "ServiceTypeIdentifier": "AWS::RAM"
+  },
+  {
+    "Category": "Security-Identity-Compliance",
+    "FilePath": "Security-Identity-Compliance\\Secrets-Manager.png",
+    "ServiceGuessedName": "SecretsManager",
+    "ServiceTypeIdentifier": "AWS::SecretsManager"
+  },
+  {
+    "Category": "Security-Identity-Compliance",
+    "FilePath": "Security-Identity-Compliance\\Security-Hub.png",
+    "ServiceGuessedName": "SecurityHub",
+    "ServiceTypeIdentifier": "AWS::SecurityHub"
+  },
+  {
+    "Category": "Security-Identity-Compliance",
+    "FilePath": "Security-Identity-Compliance\\Security-Lake.png",
+    "ServiceGuessedName": "SecurityLake",
+    "ServiceTypeIdentifier": "AWS::SecurityLake"
+  },
+  {
+    "Category": "Security-Identity-Compliance",
+    "FilePath": "Security-Identity-Compliance\\Shield.png",
+    "ServiceGuessedName": "Shield",
+    "ServiceTypeIdentifier": "AWS::Shield"
+  },
+  {
+    "Category": "Security-Identity-Compliance",
+    "FilePath": "Security-Identity-Compliance\\Signer.png",
+    "ServiceGuessedName": "Signer",
+    "ServiceTypeIdentifier": "AWS::Signer"
+  },
+  {
+    "Category": "Security-Identity-Compliance",
+    "FilePath": "Security-Identity-Compliance\\Verified-Permissions.png",
+    "ServiceGuessedName": "VerifiedPermissions",
+    "ServiceTypeIdentifier": "AWS::VerifiedPermissions"
+  },
+  {
+    "Category": "Security-Identity-Compliance",
+    "FilePath": "Security-Identity-Compliance\\WAF.png",
+    "ServiceGuessedName": "WAF",
+    "ServiceTypeIdentifier": "AWS::WAF"
+  },
+  {
+    "Category": "Storage",
+    "FilePath": "Storage\\Backup.png",
+    "ServiceGuessedName": "Backup",
+    "ServiceTypeIdentifier": "AWS::Backup"
+  },
+  {
+    "Category": "Storage",
+    "FilePath": "Storage\\EFS.png",
+    "ServiceGuessedName": "EFS",
+    "ServiceTypeIdentifier": "AWS::EFS"
+  },
+  {
+    "Category": "Storage",
+    "FilePath": "Storage\\Elastic-Block-Store.png",
+    "ServiceGuessedName": "ElasticBlockStore"
+  },
+  {
+    "Category": "Storage",
+    "FilePath": "Storage\\Elastic-Disaster-Recovery.png",
+    "ServiceGuessedName": "ElasticDisasterRecovery"
+  },
+  {
+    "Category": "Storage",
+    "FilePath": "Storage\\File-Cache.png",
+    "ServiceGuessedName": "FileCache"
+  },
+  {
+    "Category": "Storage",
+    "FilePath": "Storage\\FSx-for-Lustre.png",
+    "ServiceGuessedName": "FSxforLustre",
+    "ServiceTypeIdentifier": "AWS::FSx"
+  },
+  {
+    "Category": "Storage",
+    "FilePath": "Storage\\FSx-for-NetApp-ONTAP.png",
+    "ServiceGuessedName": "FSxforNetAppONTAP",
+    "ServiceTypeIdentifier": "AWS::FSx"
+  },
+  {
+    "Category": "Storage",
+    "FilePath": "Storage\\FSx-for-OpenZFS.png",
+    "ServiceGuessedName": "FSxforOpenZFS",
+    "ServiceTypeIdentifier": "AWS::FSx"
+  },
+  {
+    "Category": "Storage",
+    "FilePath": "Storage\\FSx-for-WFS.png",
+    "ServiceGuessedName": "FSxforWFS",
+    "ServiceTypeIdentifier": "AWS::FSx"
+  },
+  {
+    "Category": "Storage",
+    "FilePath": "Storage\\FSx.png",
+    "ServiceGuessedName": "FSx",
+    "ServiceTypeIdentifier": "AWS::FSx"
+  },
+  {
+    "Category": "Storage",
+    "FilePath": "Storage\\S3-on-Outposts.png",
+    "ServiceGuessedName": "S3onOutposts",
+    "ServiceTypeIdentifier": "AWS::S3Outposts"
+  },
+  {
+    "Category": "Storage",
+    "FilePath": "Storage\\Simple-Storage-Service-Glacier.png",
+    "ServiceGuessedName": "SimpleStorageServiceGlacier"
+  },
+  {
+    "Category": "Storage",
+    "FilePath": "Storage\\Simple-Storage-Service.png",
+    "ServiceGuessedName": "SimpleStorageService",
+    "ServiceTypeIdentifier": "AWS::S3"
+  },
+  {
+    "Category": "Storage",
+    "FilePath": "Storage\\Snowball-Edge.png",
+    "ServiceGuessedName": "SnowballEdge"
+  },
+  {
+    "Category": "Storage",
+    "FilePath": "Storage\\Snowball.png",
+    "ServiceGuessedName": "Snowball"
+  },
+  {
+    "Category": "Storage",
+    "FilePath": "Storage\\Snowcone.png",
+    "ServiceGuessedName": "Snowcone"
+  },
+  {
+    "Category": "Storage",
+    "FilePath": "Storage\\Snowmobile.png",
+    "ServiceGuessedName": "Snowmobile"
+  },
+  {
+    "Category": "Storage",
+    "FilePath": "Storage\\Storage-Gateway.png",
+    "ServiceGuessedName": "StorageGateway"
+  },
+  {
+    "Category": "VR-AR",
+    "FilePath": "VR-AR\\Sumerian.png",
+    "ServiceGuessedName": "Sumerian"
+  }
+]
