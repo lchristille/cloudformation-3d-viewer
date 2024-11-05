@@ -40,7 +40,8 @@
         }
       ]
     }
-  },  "scripts": {
+  },
+  "scripts": {
     "vscode:prepublish": "npm run package",
     "compile": "webpack",
     "watch": "webpack --watch",
@@ -69,5 +70,10 @@
   },
   "extensionDependencies": [
     "amazonwebservices.aws-toolkit-vscode"
-  ]
+  ],
+  "dependencies": {
+    "cloudformation-3d-shared": "1.0.0",
+    "yaml": "^2.6.0",
+    "yaml-ast-parser": "^0.0.43"
+  }
 }

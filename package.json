@@ -1,7 +1,9 @@
 {
   "private": true,
   "workspaces": [
-    "packages/*"
+    "packages/extension",
+    "packages/shared",
+    "packages/webview"
   ],
   "scripts": {
     "build": "yarn workspaces run build",

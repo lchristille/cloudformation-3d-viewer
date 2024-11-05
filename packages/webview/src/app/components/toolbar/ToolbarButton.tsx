@@ -43,33 +43,38 @@ const tooltipStyle = css`
 
   /* Small arrow below the tooltip */
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 100%; /* Arrow at the top of the tooltip */
     left: 50%;
     transform: translateX(-50%);
     border-width: 6px;
     border-style: solid;
-    border-color: transparent transparent #252526 transparent;  }
-`
+    border-color: transparent transparent #252526 transparent;
+  }
+`;
 
 type OnClickHandler = (event: React.MouseEvent<HTMLButtonElement>) => void;
 
 interface ToolbarButtonProps {
-  children: ReactElement<{ size?: number; color?: string, onClick?: OnClickHandler}>;
+  children: ReactElement<{
+    size?: number;
+    color?: string;
+    onClick?: OnClickHandler;
+  }>;
   onClick?: OnClickHandler;
   tooltipText?: string;
   size?: number;
   iconColor?: string;
 }
 
-export default function ToolbarButton({
+const ToolbarButton: React.FC<ToolbarButtonProps> = ({
   children,
   onClick,
   size = 16,
   iconColor = "var(--vscode-icon-foreground)",
-  tooltipText
-}: ToolbarButtonProps) {
+  tooltipText,
+}) => {
   const child = React.Children.only(children);
   return (
     <button
@@ -79,7 +84,12 @@ export default function ToolbarButton({
       {React.isValidElement(child)
         ? React.cloneElement(child, { size, color: iconColor, onClick })
         : child}
-      {tooltipText && <span css={tooltipStyle} className='tooltip'>{tooltipText}</span>}
+      {tooltipText && (
+        <span css={tooltipStyle} className="tooltip">
+          {tooltipText}
+        </span>
+      )}
     </button>
   );
-}
+};
+export default ToolbarButton;

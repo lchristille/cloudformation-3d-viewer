@@ -10,10 +10,8 @@
 			"type": "extensionHost",
 			"request": "launch",
 			"args": [
-				"--extensionDevelopmentPath=${workspaceFolder}\\packages\\extension"
-			],
-			"outFiles": [
-				"${workspaceFolder}/dist/**/*.js"
+				"--enable-source-maps",
+				"--extensionDevelopmentPath=${workspaceFolder}/packages/extension"
 			],
 			"preLaunchTask": "${defaultBuildTask}",
 			//"postDebugTask": "stop-watchers"

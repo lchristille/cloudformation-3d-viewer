@@ -11,6 +11,10 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     filename: "extension.js",
     libraryTarget: "commonjs2",
+    devtoolModuleFilenameTemplate: (info) =>
+      `file:///${path.resolve(info.absoluteResourcePath).replace(/\\/g, "/")}`,
+    devtoolFallbackModuleFilenameTemplate: (info) =>
+      `file:///${path.resolve(info.absoluteResourcePath).replace(/\\/g, "/")}`,
   },
   externals: {
     vscode: "commonjs vscode", // the vscode-module is created on-the-fly and must be excluded. Add other modules that cannot be webpack'ed, 📖 -> https://webpack.js.org/configuration/externals/
@@ -35,10 +39,12 @@ module.exports = {
   },
   plugins: [
     new webpack.DefinePlugin({
-        'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development')
+      "process.env.NODE_ENV": JSON.stringify(
+        process.env.NODE_ENV || "development"
+      ),
     }),
-],
-  devtool: "nosources-source-map",
+  ],
+  devtool: "source-map",
   infrastructureLogging: {
     level: "log", // enables logging required for problem matchers
   },

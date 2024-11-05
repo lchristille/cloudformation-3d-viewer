@@ -4,12 +4,13 @@ import { Canvas } from "@react-three/fiber";
 import ViewportScene from "../components/viewport/ViewportScene";
 
 const layoutPosition = css`
-    grid-area: main-viewport;
-`
+  grid-area: main-viewport;
+`;
 
-export default function MainViewport() {
-    return <div css={[layoutPosition]}>
-          <Canvas
+const MainViewport: React.FC = () => {
+  return (
+    <div css={[layoutPosition]}>
+      <Canvas
         shadows
         camera={{
           fov: 75,
@@ -21,4 +22,7 @@ export default function MainViewport() {
         <ViewportScene />
       </Canvas>
     </div>
-}
+  );
+};
+
+export default MainViewport;

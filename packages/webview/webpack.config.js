@@ -14,7 +14,7 @@ module.exports = {
     filename: "bundle.js",
     publicPath: 'http://localhost:9900/'
   },
-  devtool: isDevelopment ? 'inline-source-map' : 'source-map',
+  devtool: isDevelopment ? 'source-map' : 'source-map',
   resolve: {
     extensions: [".ts", ".js", ".tsx"],
   },

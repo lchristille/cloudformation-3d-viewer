@@ -19,10 +19,9 @@ const editorLayout = css`
   left: 0;
   width: 100vw;
   height: 100vh;
-  pointerEvents: auto;
 `;
 
-export default function App() {
+const App: React.FC = () => {
   return (
     <div css={[editorLayout]}>
       <Toolbar />
@@ -32,4 +31,6 @@ export default function App() {
       <BottomPanel />
     </div>
   );
-}
+};
+
+export default App;

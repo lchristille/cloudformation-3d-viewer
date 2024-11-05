@@ -5,11 +5,13 @@ import { Clone, useGLTF } from "@react-three/drei";
 const modelPath = AppendURL(PUBLIC_URI!, ["models", "hamburger-draco.glb"]);
 useGLTF.preload(modelPath);
 
-export default function Model() {
+const Model: React.FC = () => {
   const model = useGLTF(modelPath);
   return (
     <>
       <Clone object={model.scene} scale={0.5} />
     </>
   );
-}
+};
+
+export default Model;

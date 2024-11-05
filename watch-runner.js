@@ -26,6 +26,7 @@ if (command === "start") {
 
   // Construct the command string
   const watchProcessCommand = `yarn concurrently \
+    "yarn workspace cloudformation-3d-shared watch" \
     "cross-env NONCE=${nonce} yarn workspace cloudformation-3d-viewer watch" \
     "cross-env NONCE=${nonce} yarn workspace cloudformation-3d-webview webpack serve --mode development"`;
 

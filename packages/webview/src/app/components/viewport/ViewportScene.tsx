@@ -1,11 +1,6 @@
 import { Suspense, useEffect, useRef, useState } from "react";
 import { DirectionalLight, Group, Mesh } from "three";
-import {
-  TransformControls,
-  OrbitControls,
-  SoftShadows,
-} from "@react-three/drei";
-import { useControls } from "leva";
+import { OrbitControls, SoftShadows } from "@react-three/drei";
 import { Perf } from "r3f-perf";
 import { observer } from "mobx-react-lite";
 import { useStore } from "../../stores/StoreContext";
@@ -36,8 +31,7 @@ const ViewportScene: React.FC = observer(() => {
       <ambientLight intensity={1.5} />
 
       <group ref={groupRef}>
-        <Suspense>
-        </Suspense>
+        <Suspense></Suspense>
         <mesh
           receiveShadow
           position-y={-1}
@@ -50,6 +44,6 @@ const ViewportScene: React.FC = observer(() => {
       </group>
     </>
   );
-})
+});
 
 export default ViewportScene;

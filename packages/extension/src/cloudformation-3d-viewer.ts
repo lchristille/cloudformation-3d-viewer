@@ -1,6 +1,7 @@
 import * as vscode from "vscode";
-import { getNonce } from "./util";
-import { CspBuilder, CspDirective } from "./cspBuilder";
+import { getNonce } from "./helpers/util";
+import { CspBuilder, CspDirective } from "./helpers/cspBuilder";
+import { store } from "./store";
 
 /**
  * Provider for cat scratch editors.
@@ -34,7 +35,9 @@ export class CloudFormation3DViewerProvider
 
   public static readonly viewType = "cloudformation3d.viewer";
 
-  constructor(private readonly context: vscode.ExtensionContext) {}
+  constructor(private readonly context: vscode.ExtensionContext) {
+    store.context = context;
+  }
 
   /**
    * Called when our custom editor is opened.
@@ -46,8 +49,6 @@ export class CloudFormation3DViewerProvider
     webviewPanel: vscode.WebviewPanel,
     _token: vscode.CancellationToken
   ): Promise<void> {
-    this.getDocumentSymbols(document.uri);
-
     // Setup initial content for the webview
     webviewPanel.webview.options = {
       enableScripts: true,
@@ -58,22 +59,14 @@ export class CloudFormation3DViewerProvider
           "webview",
           "public"
         ),
-        vscode.Uri.joinPath(
-          this.context.extensionUri,
-          "..",
-          "webview",
-          "dist"
-        )
+        vscode.Uri.joinPath(this.context.extensionUri, "..", "webview", "dist"),
       ],
     };
-    webviewPanel.webview.html = this.getHtmlForWebview(webviewPanel.webview);
 
-    function updateWebview() {
-      webviewPanel.webview.postMessage({
-        type: "update",
-        text: "{}",
-      });
-    }
+    store.webViewPanel = webviewPanel;
+    store.document = document;
+
+    webviewPanel.webview.html = this.getHtmlForWebview(webviewPanel.webview);
 
     // Hook up event handlers so that we can synchronize the webview with the text document.
     //
@@ -86,7 +79,7 @@ export class CloudFormation3DViewerProvider
     const changeDocumentSubscription = vscode.workspace.onDidChangeTextDocument(
       (e) => {
         if (e.document.uri.toString() === document.uri.toString()) {
-          updateWebview();
+          //updateWebview();
         }
       }
     );
@@ -97,23 +90,8 @@ export class CloudFormation3DViewerProvider
     });
 
     // Receive message from the webview.
-    webviewPanel.webview.onDidReceiveMessage((e) => {
-      switch (e.command) {
-        case "getPublicUri":
-          webviewPanel.webview.postMessage({
-            command: e.command,
-            extensionMediaUri: webviewPanel.webview.asWebviewUri(
-              vscode.Uri.joinPath(this.context.extensionUri, "..", "webview", "public")
-            ),
-          });
-          return;
+    webviewPanel.webview.onDidReceiveMessage(store.messageHandler.handleMessage.bind(store.messageHandler));
 
-        case "delete":
-          return;
-      }
-    });
-
-    updateWebview();
   }
 
   /**
@@ -124,31 +102,29 @@ export class CloudFormation3DViewerProvider
     // Use a nonce to whitelist which scripts can be run
     const nonce = getNonce();
 
-    const isDevelopment = process.env.NODE_ENV === 'development';
+    const isDevelopment = process.env.NODE_ENV === "development";
     const cspBuilder = new CspBuilder(isDevelopment);
     const csp = cspBuilder
       .addSource(CspDirective.ImgSrc, webview.cspSource)
-      .addSource(CspDirective.ImgSrc, 'data:', true)
+      .addSource(CspDirective.ImgSrc, "data:", true)
       .addSource(CspDirective.StyleSrc, webview.cspSource)
       .addSource(CspDirective.StyleSrc, `'unsafe-inline'`, true)
-      .addSource(CspDirective.StyleSrc, 'https://*.vscode-cdn.net', true)
+      .addSource(CspDirective.StyleSrc, "https://*.vscode-cdn.net", true)
       .addSource(CspDirective.ScriptSrc, `'nonce-${nonce}'`)
       .addSource(CspDirective.ScriptSrc, `'wasm-unsafe-eval'`, true)
-      .addSource(CspDirective.ScriptSrc, 'http://localhost:9900', true)
-      .addSource(CspDirective.ScriptSrc, 'http://localhost:8097', true)
-      .addSource(CspDirective.ScriptSrc, 'blob:', true)
+      .addSource(CspDirective.ScriptSrc, "http://localhost:9900", true)
+      .addSource(CspDirective.ScriptSrc, "http://localhost:8097", true)
+      .addSource(CspDirective.ScriptSrc, "blob:", true)
       .addSource(CspDirective.ConnectSrc, webview.cspSource)
-      .addSource(CspDirective.ConnectSrc, 'https://www.gstatic.com/draco/')
-      .addSource(CspDirective.ConnectSrc, 'http://localhost:9900', true)
-      .addSource(CspDirective.ConnectSrc, 'ws://localhost:9900', true)
-      .addSource(CspDirective.ConnectSrc, 'ws://localhost:8097', true)
-      .addSource(CspDirective.ConnectSrc, 'data:', true)
-      .addSource(CspDirective.WorkerSrc, 'blob:', true)
+      .addSource(CspDirective.ConnectSrc, "https://www.gstatic.com/draco/")
+      .addSource(CspDirective.ConnectSrc, "http://localhost:9900", true)
+      .addSource(CspDirective.ConnectSrc, "ws://localhost:9900", true)
+      .addSource(CspDirective.ConnectSrc, "ws://localhost:8097", true)
+      .addSource(CspDirective.ConnectSrc, "data:", true)
+      .addSource(CspDirective.WorkerSrc, "blob:", true)
       .addSource(CspDirective.FontSrc, webview.cspSource)
-      .addSource(CspDirective.FontSrc, 'data:', true)
-      .build()
-
-      console.log("csp", csp);
+      .addSource(CspDirective.FontSrc, "data:", true)
+      .build();
 
     const scriptUri = webview.asWebviewUri(
       vscode.Uri.joinPath(
@@ -182,10 +158,15 @@ export class CloudFormation3DViewerProvider
       )
     );
 
-    const publicUri = webview.asWebviewUri(
-      vscode.Uri.joinPath(this.context.extensionUri, "..", "webview", "public")
-    ) + "/";
-
+    const publicUri =
+      webview.asWebviewUri(
+        vscode.Uri.joinPath(
+          this.context.extensionUri,
+          "..",
+          "webview",
+          "public"
+        )
+      ) + "/";
 
     return /* html */ `
 			<!DOCTYPE html>
@@ -210,56 +191,12 @@ export class CloudFormation3DViewerProvider
 			</head>
 			<body>
         <div id="root"></div>
-        ${ isDevelopment
-          ? `<script nonce="${nonce}" src="http://localhost:8097"></script><script nonce="${process.env.NONCE}" src="http://localhost:9900/bundle.js"></script>`
-          : `<script nonce="${nonce}" src="${scriptUri}"></script>`
+        ${
+          isDevelopment
+            ? `<script nonce="${nonce}" src="http://localhost:8097"></script><script nonce="${process.env.NONCE}" src="http://localhost:9900/bundle.js"></script>`
+            : `<script nonce="${nonce}" src="${scriptUri}"></script>`
         }
 			</body>
 			</html>`;
-  }
-
-  public async getDocumentSymbols(uri: vscode.Uri) {
-    try {
-      const symbols = await vscode.commands.executeCommand<
-        vscode.DocumentSymbol[]
-      >("vscode.executeDocumentSymbolProvider", uri);
-
-      if (symbols) {
-        symbols.forEach((symbol: vscode.DocumentSymbol) => {
-          // Check if the symbol is an instance of DocumentSymbol
-          console.log(`DocumentSymbol: ${symbol.name}`);
-          console.log(`Kind: ${vscode.SymbolKind[symbol.kind]}`);
-          console.log(
-            `Range: ${symbol.range.start.line}:${symbol.range.start.character} - ${symbol.range.end.line}:${symbol.range.end.character}`
-          );
-
-          // If there are children (e.g., nested structures), process them recursively
-          this.processDocumentSymbolChildren(symbol.children);
-        });
-      } else {
-        vscode.window.showInformationMessage(
-          "No symbols found in the document."
-        );
-      }
-    } catch (error) {
-      vscode.window.showErrorMessage(
-        `Error fetching document symbols: ${error}`
-      );
-    }
-  }
-
-  private processDocumentSymbolChildren(children: vscode.DocumentSymbol[]) {
-    children.forEach((child) => {
-      console.log(`  Child DocumentSymbol: ${child.name}`);
-      console.log(`  Child Kind: ${vscode.SymbolKind[child.kind]}`);
-      console.log(
-        `  Child Range: ${child.range.start.line}:${child.range.start.character} - ${child.range.end.line}:${child.range.end.character}`
-      );
-
-      // Recursively process any nested children
-      if (child.children.length > 0) {
-        this.processDocumentSymbolChildren(child.children);
-      }
-    });
   }
 }

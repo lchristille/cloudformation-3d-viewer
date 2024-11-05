@@ -6,7 +6,7 @@ import { useEffect } from "react";
 const modelPath = AppendURL(PUBLIC_URI!, ["models", "Fox", "glTF", "Fox.gltf"]);
 useGLTF.preload(modelPath);
 
-export default function Fox() {
+const Fox: React.FC = () => {
   const model = useGLTF(modelPath);
   const animations = useAnimations(model.animations, model.scene);
 
@@ -39,3 +39,5 @@ export default function Fox() {
     </>
   );
 }
+
+export default Fox;

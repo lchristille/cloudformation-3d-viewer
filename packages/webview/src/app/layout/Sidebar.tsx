@@ -1,11 +1,16 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
+import { useStore } from "../stores/StoreContext";
 
 const layoutPosition = css`
-    grid-area: sidebar;
-`
+  grid-area: sidebar;
+`;
 
-export default function Sidebar() {
-    return <div css={[layoutPosition]}>
-    </div>
-}
+const Sidebar: React.FC = () => {
+  const { vsCodeStore } = useStore();
+  vsCodeStore.getMainDocumentSymbols().then((response) => {
+  })
+  return <div css={[layoutPosition]}></div>;
+};
+
+export default Sidebar;

@@ -1,10 +1,9 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import { MdOutlineQueryStats } from "react-icons/md";
 import ToolbarButton from "../components/toolbar/ToolbarButton";
-import { observer } from "mobx-react-lite";
 import { useStore } from "../stores/StoreContext";
-
+import { MdOutlineQueryStats } from "react-icons/md";
+import { CgListTree } from "react-icons/cg";
 const layoutStyle = css`
   grid-area: toolbar;
   height: 35px;
@@ -19,16 +18,32 @@ const layoutStyle = css`
 `;
 
 const Toolbar: React.FC = () => {
-  const { layoutStore } = useStore();
+  const { layoutStore, vsCodeStore } = useStore();
   return (
     <div css={layoutStyle} className="flex items-center justify-center">
       <ToolbarButton
-        tooltipText="Show Stats"
+        tooltipText="Show/Hide Outliner"
+        onClick={() => {
+          layoutStore.toggleOutlinerVisibility();
+        }}
+      >
+        <CgListTree />
+      </ToolbarButton>
+      <ToolbarButton
+        tooltipText="Show/Hide Renderer Stats"
         onClick={() => {
           layoutStore.toggleStatsVisibility();
         }}
       >
         <MdOutlineQueryStats />
+      </ToolbarButton>
+      <ToolbarButton
+        tooltipText="Show/Hide Outliner"
+        onClick={() => {
+          vsCodeStore.showInformationMessage("This is a message from the webview!");
+        }}
+      >
+        <CgListTree />
       </ToolbarButton>
     </div>
   );
