@@ -3,11 +3,13 @@ import MessageHandler from './messages/messageHandler';
 import MessageSender from './messages/messageSender';
 import SymbolsProvider from './document/documentProvider';
 import { WorkspaceMode } from 'cloudformation-3d-shared';
+import { TemplateProvider } from './template/templateProvider';
 
 class Store {
     messageHandler: MessageHandler = new MessageHandler();
     messageSender: MessageSender = new MessageSender();
     symbolsProvider: SymbolsProvider = new SymbolsProvider();
+    templateProvider: TemplateProvider = new TemplateProvider();
 
     document?: vscode.TextDocument;
     webViewPanel?: vscode.WebviewPanel;
@@ -30,7 +32,6 @@ class Store {
 
         return this._workspaceMode;
     }
-
 }
 
 export const store = new Store();

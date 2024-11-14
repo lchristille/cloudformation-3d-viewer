@@ -1,6 +1,6 @@
 import * as vscode from "vscode";
 import { store } from "../store";
-import { CloudformationDocument } from "cloudformation-3d-shared";
+import { CloudformationDocument, CFResources } from "cloudformation-3d-shared";
 
 type HandlerFunction = (payload: any) => void;
 
@@ -47,20 +47,21 @@ export default class MessageHandler {
 
   constructor() {
     this.onReady.push(() => {
-      store.messageSender.setWebviewStoreValue("workspaceMode", store.getWorkspaceMode());
+      store.messageSender.setWebviewStoreValue(
+        "workspaceMode",
+        store.getWorkspaceMode()
+      );
       console.info("Sent workspaceMode", store.getWorkspaceMode());
-    })
+    });
     console.log("onReady constructor", this.onReady);
   }
 
   handleMessage(message: Message) {
     if (isReadyMessage(message)) {
       store.webviewReady = message.ready;
-      console.info(
-        `The webview has signaled that is ${message.ready ? "" : "not "}ready`
+      this.onReady.forEach((handlerFunction) =>
+        handlerFunction.call(store.messageHandler, {})
       );
-      console.log("onReady", this.onReady);
-      this.onReady.forEach((handlerFunction) => handlerFunction.call(store.messageHandler, {}));
     }
 
     if (isCallMessage(message) && message.functionName !== "handleMessage") {
@@ -94,19 +95,31 @@ export default class MessageHandler {
     vscode.window.showInformationMessage(`${content}`);
   }
 
-  getMainDocumentUriAsync({ requestId }: {requestId: string}) {
+  getMainDocumentUriAsync({ requestId }: { requestId: string }) {
     store.messageSender.sendResponse(requestId, {
-      mainDocumentUri: store.document?.uri
+      mainDocumentUri: store.document?.uri,
     });
   }
 
-  getMainDocumentSymbolsAsync({ requestId }: {requestId: string}) {
+  getMainDocumentSymbolsAsync({ requestId }: { requestId: string }) {
     if (store.document) {
-    store.symbolsProvider.getCloudformationDocument(store.document.uri).then((document: CloudformationDocument) => {
-      store.messageSender.sendResponse(requestId, {
-        document
-      })
-    })
+      store.symbolsProvider
+        .getCloudformationDocument(store.document.uri)
+        .then((document: CloudformationDocument) => {
+          store.messageSender.sendResponse(requestId, {
+            document,
+          });
+        });
     }
+  }
+
+  getTemplateResourcesAsync({ requestId }: { requestId: string }) {
+    store.templateProvider
+      .getResources()
+      .then((resources: CFResources) => {
+        store.messageSender.sendResponse(requestId, {
+          resources,
+        });
+      });
   }
 }

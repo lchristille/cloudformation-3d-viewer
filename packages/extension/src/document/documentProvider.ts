@@ -7,6 +7,7 @@ import {
   CFSymbolKind,
   SymbolValue,
   SymbolRange,
+  DocumentSymbols
 } from "cloudformation-3d-shared";
 import path from "path";
 
@@ -37,13 +38,31 @@ export default class CloudformationDocumentProvider {
                 resolve: (str: String) => ({ Ref: str }),
               },
             ];
-            const doc = YAML.parseDocument(documentText, {
+            result.parsedDocument = YAML.parseDocument(documentText, {
               keepSourceTokens: true,
               stringKeys: true,
               lineCounter: lineCounter,
               customTags: customTags,
             });
-            this.parseSymbolsFromYaml(doc, lineCounter);
+            result.content = result.parsedDocument.toJS();
+
+            /* Symbols.... probably useful to handle a unified structure between YAML and JSON? */
+            const symbols = this.parseSymbolsFromYaml(result.parsedDocument, lineCounter);
+            result.documentSymbols = {} as DocumentSymbols;
+            const resourcesSymbols = symbols.find(x => x.name === "Resources");
+            if (!resourcesSymbols) {
+              throw new Error(`The document ${uri} has no resources section (The Resources section is a required top-level section in a CloudFormation template).`);
+            }
+            result.documentSymbols.Resources = resourcesSymbols;
+            result.documentSymbols.AWSTemplateFormatVersion = symbols.find(x => x.name === "AWSTemplateFormatVersion");
+            result.documentSymbols.Description = symbols.find(x => x.name === "Description");
+            result.documentSymbols.Metadata = symbols.find(x => x.name === "Metadata");
+            result.documentSymbols.Parameters = symbols.find(x => x.name === "Parameters");
+            result.documentSymbols.Rules = symbols.find(x => x.name === "Rules");
+            result.documentSymbols.Mappings = symbols.find(x => x.name === "Mappings");
+            result.documentSymbols.Conditions = symbols.find(x => x.name === "Conditions");
+            result.documentSymbols.Transform = symbols.find(x => x.name === "Transform");
+            result.documentSymbols.Outputs = symbols.find(x => x.name === "Outputs");
         }
       } else {
         vscode.window.showInformationMessage(
@@ -58,6 +77,7 @@ export default class CloudformationDocumentProvider {
     return result;
   }
 
+  /* YAML PARSING */
   private parseSymbolsFromYaml(
     doc: YAML.Document,
     lineCounter: YAML.LineCounter

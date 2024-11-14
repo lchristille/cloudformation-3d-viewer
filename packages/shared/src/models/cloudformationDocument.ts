@@ -1,4 +1,5 @@
 import * as vscode from "vscode";
+import * as YAML from "yaml";
 import { CFSymbolKind, CFTemplateLanguage } from "./enums";
 
 export interface CloudformationDocument {
@@ -6,7 +7,22 @@ export interface CloudformationDocument {
   relativePath: string;
   uri: vscode.Uri;
   templateLanguage: CFTemplateLanguage
-  symbols: SymbolNode[];
+  parsedDocument: YAML.Document;
+  documentSymbols: DocumentSymbols;
+  content: any
+}
+
+export interface DocumentSymbols {
+  AWSTemplateFormatVersion?: SymbolNode;
+  Description?: SymbolNode;
+  Metadata?: SymbolNode;
+  Parameters?: SymbolNode;
+  Rules?: SymbolNode;
+  Mappings?: SymbolNode;
+  Conditions?: SymbolNode;
+  Transform?: SymbolNode;
+  Resources: SymbolNode;
+  Outputs?: SymbolNode;
 }
 
 export interface SymbolNode {

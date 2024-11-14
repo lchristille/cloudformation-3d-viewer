@@ -1,2 +1,5 @@
 export * from './models/cloudformationDocument'
 export * from './models/enums'
+export * from './models/cloudformationResource'
+export * from './models/notifications'
+export * from './resources/index'

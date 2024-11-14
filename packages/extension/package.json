@@ -73,7 +73,6 @@
   ],
   "dependencies": {
     "cloudformation-3d-shared": "1.0.0",
-    "yaml": "^2.6.0",
-    "yaml-ast-parser": "^0.0.43"
+    "yaml": "^2.6.0"
   }
 }

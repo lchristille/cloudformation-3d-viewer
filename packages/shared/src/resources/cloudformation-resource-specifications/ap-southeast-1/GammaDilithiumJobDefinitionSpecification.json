@@ -1,0 +1,1253 @@
+{
+  "PropertyTypes": {
+    "AWS::GammaDilithium::JobDefinition.EcsProperties": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-ecsproperties.html",
+      "Properties": {
+        "TaskProperties": {
+          "Type": "List",
+          "Required": true,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-ecsproperties.html#cfn-gammadilithium-jobdefinition-ecsproperties-taskproperties",
+          "ItemType": "EcsTaskProperties",
+          "UpdateType": "Mutable"
+        }
+      }
+    },
+    "AWS::GammaDilithium::JobDefinition.FargatePlatformConfiguration": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-containerproperties-fargateplatformconfiguration.html",
+      "Properties": {
+        "PlatformVersion": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-containerproperties-fargateplatformconfiguration.html#cfn-gammadilithium-jobdefinition-containerproperties-fargateplatformconfiguration-platformversion",
+          "PrimitiveType": "String",
+          "UpdateType": "Mutable"
+        }
+      }
+    },
+    "AWS::GammaDilithium::JobDefinition.ImagePullSecret": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-imagepullsecret.html",
+      "Properties": {
+        "Name": {
+          "Required": true,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-imagepullsecret.html#cfn-gammadilithium-jobdefinition-imagepullsecret-name",
+          "PrimitiveType": "String",
+          "UpdateType": "Mutable"
+        }
+      }
+    },
+    "AWS::GammaDilithium::JobDefinition.ResourceRequirement": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-resourcerequirement.html",
+      "Properties": {
+        "Type": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-resourcerequirement.html#cfn-gammadilithium-jobdefinition-resourcerequirement-type",
+          "PrimitiveType": "String",
+          "UpdateType": "Mutable"
+        },
+        "Value": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-resourcerequirement.html#cfn-gammadilithium-jobdefinition-resourcerequirement-value",
+          "PrimitiveType": "String",
+          "UpdateType": "Mutable"
+        }
+      }
+    },
+    "AWS::GammaDilithium::JobDefinition.RepositoryCredentials": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-taskcontainerproperties-repositorycredentials.html",
+      "Properties": {
+        "CredentialsParameter": {
+          "Required": true,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-taskcontainerproperties-repositorycredentials.html#cfn-gammadilithium-jobdefinition-taskcontainerproperties-repositorycredentials-credentialsparameter",
+          "PrimitiveType": "String",
+          "UpdateType": "Mutable"
+        }
+      }
+    },
+    "AWS::GammaDilithium::JobDefinition.TaskContainerProperties": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-taskcontainerproperties.html",
+      "Properties": {
+        "RepositoryCredentials": {
+          "Type": "RepositoryCredentials",
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-taskcontainerproperties.html#cfn-gammadilithium-jobdefinition-taskcontainerproperties-repositorycredentials",
+          "UpdateType": "Mutable"
+        },
+        "User": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-taskcontainerproperties.html#cfn-gammadilithium-jobdefinition-taskcontainerproperties-user",
+          "PrimitiveType": "String",
+          "UpdateType": "Mutable"
+        },
+        "Secrets": {
+          "Type": "List",
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-taskcontainerproperties.html#cfn-gammadilithium-jobdefinition-taskcontainerproperties-secrets",
+          "ItemType": "Secret",
+          "UpdateType": "Mutable"
+        },
+        "Privileged": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-taskcontainerproperties.html#cfn-gammadilithium-jobdefinition-taskcontainerproperties-privileged",
+          "PrimitiveType": "Boolean",
+          "UpdateType": "Mutable"
+        },
+        "LinuxParameters": {
+          "Type": "LinuxParameters",
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-taskcontainerproperties.html#cfn-gammadilithium-jobdefinition-taskcontainerproperties-linuxparameters",
+          "UpdateType": "Mutable"
+        },
+        "ReadonlyRootFilesystem": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-taskcontainerproperties.html#cfn-gammadilithium-jobdefinition-taskcontainerproperties-readonlyrootfilesystem",
+          "PrimitiveType": "Boolean",
+          "UpdateType": "Mutable"
+        },
+        "Image": {
+          "Required": true,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-taskcontainerproperties.html#cfn-gammadilithium-jobdefinition-taskcontainerproperties-image",
+          "PrimitiveType": "String",
+          "UpdateType": "Mutable"
+        },
+        "LogConfiguration": {
+          "Type": "LogConfiguration",
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-taskcontainerproperties.html#cfn-gammadilithium-jobdefinition-taskcontainerproperties-logconfiguration",
+          "UpdateType": "Mutable"
+        },
+        "Essential": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-taskcontainerproperties.html#cfn-gammadilithium-jobdefinition-taskcontainerproperties-essential",
+          "PrimitiveType": "Boolean",
+          "UpdateType": "Mutable"
+        },
+        "ResourceRequirements": {
+          "Type": "List",
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-taskcontainerproperties.html#cfn-gammadilithium-jobdefinition-taskcontainerproperties-resourcerequirements",
+          "ItemType": "ResourceRequirement",
+          "UpdateType": "Mutable"
+        },
+        "Name": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-taskcontainerproperties.html#cfn-gammadilithium-jobdefinition-taskcontainerproperties-name",
+          "PrimitiveType": "String",
+          "UpdateType": "Mutable"
+        },
+        "MountPoints": {
+          "Type": "List",
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-taskcontainerproperties.html#cfn-gammadilithium-jobdefinition-taskcontainerproperties-mountpoints",
+          "ItemType": "MountPoints",
+          "UpdateType": "Mutable"
+        },
+        "DependsOn": {
+          "Type": "List",
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-taskcontainerproperties.html#cfn-gammadilithium-jobdefinition-taskcontainerproperties-dependson",
+          "ItemType": "TaskContainerDependency",
+          "UpdateType": "Mutable"
+        },
+        "Command": {
+          "PrimitiveItemType": "String",
+          "Type": "List",
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-taskcontainerproperties.html#cfn-gammadilithium-jobdefinition-taskcontainerproperties-command",
+          "UpdateType": "Mutable"
+        },
+        "Environment": {
+          "Type": "List",
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-taskcontainerproperties.html#cfn-gammadilithium-jobdefinition-taskcontainerproperties-environment",
+          "ItemType": "Environment",
+          "UpdateType": "Mutable"
+        },
+        "Ulimits": {
+          "Type": "List",
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-taskcontainerproperties.html#cfn-gammadilithium-jobdefinition-taskcontainerproperties-ulimits",
+          "ItemType": "Ulimit",
+          "UpdateType": "Mutable"
+        }
+      }
+    },
+    "AWS::GammaDilithium::JobDefinition.EcsTaskProperties": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-ecstaskproperties.html",
+      "Properties": {
+        "PlatformVersion": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-ecstaskproperties.html#cfn-gammadilithium-jobdefinition-ecstaskproperties-platformversion",
+          "PrimitiveType": "String",
+          "UpdateType": "Mutable"
+        },
+        "ExecutionRoleArn": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-ecstaskproperties.html#cfn-gammadilithium-jobdefinition-ecstaskproperties-executionrolearn",
+          "PrimitiveType": "String",
+          "UpdateType": "Mutable"
+        },
+        "RuntimePlatform": {
+          "Type": "RuntimePlatform",
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-ecstaskproperties.html#cfn-gammadilithium-jobdefinition-ecstaskproperties-runtimeplatform",
+          "UpdateType": "Mutable"
+        },
+        "TaskRoleArn": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-ecstaskproperties.html#cfn-gammadilithium-jobdefinition-ecstaskproperties-taskrolearn",
+          "PrimitiveType": "String",
+          "UpdateType": "Mutable"
+        },
+        "IpcMode": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-ecstaskproperties.html#cfn-gammadilithium-jobdefinition-ecstaskproperties-ipcmode",
+          "PrimitiveType": "String",
+          "UpdateType": "Mutable"
+        },
+        "Volumes": {
+          "Type": "List",
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-ecstaskproperties.html#cfn-gammadilithium-jobdefinition-ecstaskproperties-volumes",
+          "ItemType": "Volumes",
+          "UpdateType": "Mutable"
+        },
+        "Containers": {
+          "Type": "List",
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-ecstaskproperties.html#cfn-gammadilithium-jobdefinition-ecstaskproperties-containers",
+          "ItemType": "TaskContainerProperties",
+          "UpdateType": "Mutable"
+        },
+        "NetworkConfiguration": {
+          "Type": "NetworkConfiguration",
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-ecstaskproperties.html#cfn-gammadilithium-jobdefinition-ecstaskproperties-networkconfiguration",
+          "UpdateType": "Mutable"
+        },
+        "PidMode": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-ecstaskproperties.html#cfn-gammadilithium-jobdefinition-ecstaskproperties-pidmode",
+          "PrimitiveType": "String",
+          "UpdateType": "Mutable"
+        },
+        "EphemeralStorage": {
+          "Type": "EphemeralStorage",
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-ecstaskproperties.html#cfn-gammadilithium-jobdefinition-ecstaskproperties-ephemeralstorage",
+          "UpdateType": "Mutable"
+        }
+      }
+    },
+    "AWS::GammaDilithium::JobDefinition.LinuxParameters": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-taskcontainerproperties-linuxparameters.html",
+      "Properties": {
+        "Swappiness": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-taskcontainerproperties-linuxparameters.html#cfn-gammadilithium-jobdefinition-taskcontainerproperties-linuxparameters-swappiness",
+          "PrimitiveType": "Integer",
+          "UpdateType": "Mutable"
+        },
+        "Tmpfs": {
+          "Type": "List",
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-taskcontainerproperties-linuxparameters.html#cfn-gammadilithium-jobdefinition-taskcontainerproperties-linuxparameters-tmpfs",
+          "ItemType": "Tmpfs",
+          "UpdateType": "Mutable"
+        },
+        "SharedMemorySize": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-taskcontainerproperties-linuxparameters.html#cfn-gammadilithium-jobdefinition-taskcontainerproperties-linuxparameters-sharedmemorysize",
+          "PrimitiveType": "Integer",
+          "UpdateType": "Mutable"
+        },
+        "Devices": {
+          "Type": "List",
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-taskcontainerproperties-linuxparameters.html#cfn-gammadilithium-jobdefinition-taskcontainerproperties-linuxparameters-devices",
+          "ItemType": "Device",
+          "UpdateType": "Mutable"
+        },
+        "InitProcessEnabled": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-taskcontainerproperties-linuxparameters.html#cfn-gammadilithium-jobdefinition-taskcontainerproperties-linuxparameters-initprocessenabled",
+          "PrimitiveType": "Boolean",
+          "UpdateType": "Mutable"
+        },
+        "MaxSwap": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-taskcontainerproperties-linuxparameters.html#cfn-gammadilithium-jobdefinition-taskcontainerproperties-linuxparameters-maxswap",
+          "PrimitiveType": "Integer",
+          "UpdateType": "Mutable"
+        }
+      }
+    },
+    "AWS::GammaDilithium::JobDefinition.RetryStrategy": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-retrystrategy.html",
+      "Properties": {
+        "EvaluateOnExit": {
+          "Type": "List",
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-retrystrategy.html#cfn-gammadilithium-jobdefinition-retrystrategy-evaluateonexit",
+          "ItemType": "EvaluateOnExit",
+          "UpdateType": "Mutable"
+        },
+        "Attempts": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-retrystrategy.html#cfn-gammadilithium-jobdefinition-retrystrategy-attempts",
+          "PrimitiveType": "Integer",
+          "UpdateType": "Mutable"
+        }
+      }
+    },
+    "AWS::GammaDilithium::JobDefinition.Environment": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-environment.html",
+      "Properties": {
+        "Value": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-environment.html#cfn-gammadilithium-jobdefinition-environment-value",
+          "PrimitiveType": "String",
+          "UpdateType": "Mutable"
+        },
+        "Name": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-environment.html#cfn-gammadilithium-jobdefinition-environment-name",
+          "PrimitiveType": "String",
+          "UpdateType": "Mutable"
+        }
+      }
+    },
+    "AWS::GammaDilithium::JobDefinition.TaskContainerDependency": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-taskcontainerdependency.html",
+      "Properties": {
+        "Condition": {
+          "Required": true,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-taskcontainerdependency.html#cfn-gammadilithium-jobdefinition-taskcontainerdependency-condition",
+          "PrimitiveType": "String",
+          "UpdateType": "Mutable"
+        },
+        "ContainerName": {
+          "Required": true,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-taskcontainerdependency.html#cfn-gammadilithium-jobdefinition-taskcontainerdependency-containername",
+          "PrimitiveType": "String",
+          "UpdateType": "Mutable"
+        }
+      }
+    },
+    "AWS::GammaDilithium::JobDefinition.MountPoints": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-mountpoints.html",
+      "Properties": {
+        "ReadOnly": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-mountpoints.html#cfn-gammadilithium-jobdefinition-mountpoints-readonly",
+          "PrimitiveType": "Boolean",
+          "UpdateType": "Mutable"
+        },
+        "SourceVolume": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-mountpoints.html#cfn-gammadilithium-jobdefinition-mountpoints-sourcevolume",
+          "PrimitiveType": "String",
+          "UpdateType": "Mutable"
+        },
+        "ContainerPath": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-mountpoints.html#cfn-gammadilithium-jobdefinition-mountpoints-containerpath",
+          "PrimitiveType": "String",
+          "UpdateType": "Mutable"
+        }
+      }
+    },
+    "AWS::GammaDilithium::JobDefinition.EksVolume": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-eksvolume.html",
+      "Properties": {
+        "Secret": {
+          "Type": "EksSecret",
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-eksvolume.html#cfn-gammadilithium-jobdefinition-eksvolume-secret",
+          "UpdateType": "Mutable"
+        },
+        "EmptyDir": {
+          "Type": "EksEmptyDir",
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-eksvolume.html#cfn-gammadilithium-jobdefinition-eksvolume-emptydir",
+          "UpdateType": "Mutable"
+        },
+        "HostPath": {
+          "Type": "EksHostPath",
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-eksvolume.html#cfn-gammadilithium-jobdefinition-eksvolume-hostpath",
+          "UpdateType": "Mutable"
+        },
+        "Name": {
+          "Required": true,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-eksvolume.html#cfn-gammadilithium-jobdefinition-eksvolume-name",
+          "PrimitiveType": "String",
+          "UpdateType": "Mutable"
+        }
+      }
+    },
+    "AWS::GammaDilithium::JobDefinition.EksProperties": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-eksproperties.html",
+      "Properties": {
+        "PodProperties": {
+          "Type": "PodProperties",
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-eksproperties.html#cfn-gammadilithium-jobdefinition-eksproperties-podproperties",
+          "UpdateType": "Mutable"
+        }
+      }
+    },
+    "AWS::GammaDilithium::JobDefinition.EksContainerEnvironmentVariable": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-ekscontainerenvironmentvariable.html",
+      "Properties": {
+        "Value": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-ekscontainerenvironmentvariable.html#cfn-gammadilithium-jobdefinition-ekscontainerenvironmentvariable-value",
+          "PrimitiveType": "String",
+          "UpdateType": "Mutable"
+        },
+        "Name": {
+          "Required": true,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-ekscontainerenvironmentvariable.html#cfn-gammadilithium-jobdefinition-ekscontainerenvironmentvariable-name",
+          "PrimitiveType": "String",
+          "UpdateType": "Mutable"
+        }
+      }
+    },
+    "AWS::GammaDilithium::JobDefinition.Volumes": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-volumes.html",
+      "Properties": {
+        "Host": {
+          "Type": "VolumesHost",
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-volumes.html#cfn-gammadilithium-jobdefinition-volumes-host",
+          "UpdateType": "Mutable"
+        },
+        "EfsVolumeConfiguration": {
+          "Type": "EfsVolumeConfiguration",
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-volumes.html#cfn-gammadilithium-jobdefinition-volumes-efsvolumeconfiguration",
+          "UpdateType": "Mutable"
+        },
+        "Name": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-volumes.html#cfn-gammadilithium-jobdefinition-volumes-name",
+          "PrimitiveType": "String",
+          "UpdateType": "Mutable"
+        }
+      }
+    },
+    "AWS::GammaDilithium::JobDefinition.NodeRangeProperty": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-noderangeproperty.html",
+      "Properties": {
+        "Container": {
+          "Type": "ContainerProperties",
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-noderangeproperty.html#cfn-gammadilithium-jobdefinition-noderangeproperty-container",
+          "UpdateType": "Mutable"
+        },
+        "TargetNodes": {
+          "Required": true,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-noderangeproperty.html#cfn-gammadilithium-jobdefinition-noderangeproperty-targetnodes",
+          "PrimitiveType": "String",
+          "UpdateType": "Mutable"
+        },
+        "EcsProperties": {
+          "Type": "EcsProperties",
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-noderangeproperty.html#cfn-gammadilithium-jobdefinition-noderangeproperty-ecsproperties",
+          "UpdateType": "Mutable"
+        },
+        "InstanceTypes": {
+          "PrimitiveItemType": "String",
+          "Type": "List",
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-noderangeproperty.html#cfn-gammadilithium-jobdefinition-noderangeproperty-instancetypes",
+          "UpdateType": "Mutable"
+        },
+        "EksProperties": {
+          "Type": "EksProperties",
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-noderangeproperty.html#cfn-gammadilithium-jobdefinition-noderangeproperty-eksproperties",
+          "UpdateType": "Mutable"
+        }
+      }
+    },
+    "AWS::GammaDilithium::JobDefinition.Secret": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-secret.html",
+      "Properties": {
+        "ValueFrom": {
+          "Required": true,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-secret.html#cfn-gammadilithium-jobdefinition-secret-valuefrom",
+          "PrimitiveType": "String",
+          "UpdateType": "Mutable"
+        },
+        "Name": {
+          "Required": true,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-secret.html#cfn-gammadilithium-jobdefinition-secret-name",
+          "PrimitiveType": "String",
+          "UpdateType": "Mutable"
+        }
+      }
+    },
+    "AWS::GammaDilithium::JobDefinition.EksContainerResourceRequirements": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-ekscontainerresourcerequirements.html",
+      "Properties": {
+        "Limits": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-ekscontainerresourcerequirements.html#cfn-gammadilithium-jobdefinition-ekscontainerresourcerequirements-limits",
+          "PrimitiveType": "Json",
+          "UpdateType": "Mutable"
+        },
+        "Requests": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-ekscontainerresourcerequirements.html#cfn-gammadilithium-jobdefinition-ekscontainerresourcerequirements-requests",
+          "PrimitiveType": "Json",
+          "UpdateType": "Mutable"
+        }
+      }
+    },
+    "AWS::GammaDilithium::JobDefinition.Timeout": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-timeout.html",
+      "Properties": {
+        "AttemptDurationSeconds": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-timeout.html#cfn-gammadilithium-jobdefinition-timeout-attemptdurationseconds",
+          "PrimitiveType": "Integer",
+          "UpdateType": "Mutable"
+        }
+      }
+    },
+    "AWS::GammaDilithium::JobDefinition.EfsVolumeConfiguration": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-efsvolumeconfiguration.html",
+      "Properties": {
+        "TransitEncryption": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-efsvolumeconfiguration.html#cfn-gammadilithium-jobdefinition-efsvolumeconfiguration-transitencryption",
+          "PrimitiveType": "String",
+          "UpdateType": "Mutable"
+        },
+        "AuthorizationConfig": {
+          "Type": "AuthorizationConfig",
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-efsvolumeconfiguration.html#cfn-gammadilithium-jobdefinition-efsvolumeconfiguration-authorizationconfig",
+          "UpdateType": "Mutable"
+        },
+        "FileSystemId": {
+          "Required": true,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-efsvolumeconfiguration.html#cfn-gammadilithium-jobdefinition-efsvolumeconfiguration-filesystemid",
+          "PrimitiveType": "String",
+          "UpdateType": "Mutable"
+        },
+        "RootDirectory": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-efsvolumeconfiguration.html#cfn-gammadilithium-jobdefinition-efsvolumeconfiguration-rootdirectory",
+          "PrimitiveType": "String",
+          "UpdateType": "Mutable"
+        },
+        "TransitEncryptionPort": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-efsvolumeconfiguration.html#cfn-gammadilithium-jobdefinition-efsvolumeconfiguration-transitencryptionport",
+          "PrimitiveType": "Integer",
+          "UpdateType": "Mutable"
+        }
+      }
+    },
+    "AWS::GammaDilithium::JobDefinition.Metadata": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-podproperties-metadata.html",
+      "Properties": {
+        "Labels": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-podproperties-metadata.html#cfn-gammadilithium-jobdefinition-podproperties-metadata-labels",
+          "PrimitiveType": "Json",
+          "UpdateType": "Mutable"
+        }
+      }
+    },
+    "AWS::GammaDilithium::JobDefinition.PodProperties": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-podproperties.html",
+      "Properties": {
+        "InitContainers": {
+          "Type": "List",
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-podproperties.html#cfn-gammadilithium-jobdefinition-podproperties-initcontainers",
+          "ItemType": "EksContainer",
+          "UpdateType": "Mutable"
+        },
+        "Volumes": {
+          "Type": "List",
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-podproperties.html#cfn-gammadilithium-jobdefinition-podproperties-volumes",
+          "ItemType": "EksVolume",
+          "UpdateType": "Mutable"
+        },
+        "DnsPolicy": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-podproperties.html#cfn-gammadilithium-jobdefinition-podproperties-dnspolicy",
+          "PrimitiveType": "String",
+          "UpdateType": "Mutable"
+        },
+        "Containers": {
+          "Type": "List",
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-podproperties.html#cfn-gammadilithium-jobdefinition-podproperties-containers",
+          "ItemType": "EksContainer",
+          "UpdateType": "Mutable"
+        },
+        "Metadata": {
+          "Type": "Metadata",
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-podproperties.html#cfn-gammadilithium-jobdefinition-podproperties-metadata",
+          "UpdateType": "Mutable"
+        },
+        "ServiceAccountName": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-podproperties.html#cfn-gammadilithium-jobdefinition-podproperties-serviceaccountname",
+          "PrimitiveType": "String",
+          "UpdateType": "Mutable"
+        },
+        "ImagePullSecrets": {
+          "Type": "List",
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-podproperties.html#cfn-gammadilithium-jobdefinition-podproperties-imagepullsecrets",
+          "ItemType": "ImagePullSecret",
+          "UpdateType": "Mutable"
+        },
+        "HostNetwork": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-podproperties.html#cfn-gammadilithium-jobdefinition-podproperties-hostnetwork",
+          "PrimitiveType": "Boolean",
+          "UpdateType": "Mutable"
+        },
+        "ShareProcessNamespace": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-podproperties.html#cfn-gammadilithium-jobdefinition-podproperties-shareprocessnamespace",
+          "PrimitiveType": "Boolean",
+          "UpdateType": "Mutable"
+        }
+      }
+    },
+    "AWS::GammaDilithium::JobDefinition.LogConfiguration": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-taskcontainerproperties-logconfiguration.html",
+      "Properties": {
+        "SecretOptions": {
+          "Type": "List",
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-taskcontainerproperties-logconfiguration.html#cfn-gammadilithium-jobdefinition-taskcontainerproperties-logconfiguration-secretoptions",
+          "ItemType": "Secret",
+          "UpdateType": "Mutable"
+        },
+        "Options": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-taskcontainerproperties-logconfiguration.html#cfn-gammadilithium-jobdefinition-taskcontainerproperties-logconfiguration-options",
+          "PrimitiveType": "Json",
+          "UpdateType": "Mutable"
+        },
+        "LogDriver": {
+          "Required": true,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-taskcontainerproperties-logconfiguration.html#cfn-gammadilithium-jobdefinition-taskcontainerproperties-logconfiguration-logdriver",
+          "PrimitiveType": "String",
+          "UpdateType": "Mutable"
+        }
+      }
+    },
+    "AWS::GammaDilithium::JobDefinition.EksContainer": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-ekscontainer.html",
+      "Properties": {
+        "Args": {
+          "PrimitiveItemType": "String",
+          "Type": "List",
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-ekscontainer.html#cfn-gammadilithium-jobdefinition-ekscontainer-args",
+          "UpdateType": "Mutable"
+        },
+        "VolumeMounts": {
+          "Type": "List",
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-ekscontainer.html#cfn-gammadilithium-jobdefinition-ekscontainer-volumemounts",
+          "ItemType": "EksContainerVolumeMount",
+          "UpdateType": "Mutable"
+        },
+        "ImagePullPolicy": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-ekscontainer.html#cfn-gammadilithium-jobdefinition-ekscontainer-imagepullpolicy",
+          "PrimitiveType": "String",
+          "UpdateType": "Mutable"
+        },
+        "Command": {
+          "PrimitiveItemType": "String",
+          "Type": "List",
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-ekscontainer.html#cfn-gammadilithium-jobdefinition-ekscontainer-command",
+          "UpdateType": "Mutable"
+        },
+        "SecurityContext": {
+          "Type": "EksContainerSecurityContext",
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-ekscontainer.html#cfn-gammadilithium-jobdefinition-ekscontainer-securitycontext",
+          "UpdateType": "Mutable"
+        },
+        "Resources": {
+          "Type": "EksContainerResourceRequirements",
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-ekscontainer.html#cfn-gammadilithium-jobdefinition-ekscontainer-resources",
+          "UpdateType": "Mutable"
+        },
+        "Image": {
+          "Required": true,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-ekscontainer.html#cfn-gammadilithium-jobdefinition-ekscontainer-image",
+          "PrimitiveType": "String",
+          "UpdateType": "Mutable"
+        },
+        "Env": {
+          "Type": "List",
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-ekscontainer.html#cfn-gammadilithium-jobdefinition-ekscontainer-env",
+          "ItemType": "EksContainerEnvironmentVariable",
+          "UpdateType": "Mutable"
+        },
+        "Name": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-ekscontainer.html#cfn-gammadilithium-jobdefinition-ekscontainer-name",
+          "PrimitiveType": "String",
+          "UpdateType": "Mutable"
+        }
+      }
+    },
+    "AWS::GammaDilithium::JobDefinition.VolumesHost": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-volumeshost.html",
+      "Properties": {
+        "SourcePath": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-volumeshost.html#cfn-gammadilithium-jobdefinition-volumeshost-sourcepath",
+          "PrimitiveType": "String",
+          "UpdateType": "Mutable"
+        }
+      }
+    },
+    "AWS::GammaDilithium::JobDefinition.EksContainerVolumeMount": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-ekscontainervolumemount.html",
+      "Properties": {
+        "MountPath": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-ekscontainervolumemount.html#cfn-gammadilithium-jobdefinition-ekscontainervolumemount-mountpath",
+          "PrimitiveType": "String",
+          "UpdateType": "Mutable"
+        },
+        "ReadOnly": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-ekscontainervolumemount.html#cfn-gammadilithium-jobdefinition-ekscontainervolumemount-readonly",
+          "PrimitiveType": "Boolean",
+          "UpdateType": "Mutable"
+        },
+        "Name": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-ekscontainervolumemount.html#cfn-gammadilithium-jobdefinition-ekscontainervolumemount-name",
+          "PrimitiveType": "String",
+          "UpdateType": "Mutable"
+        }
+      }
+    },
+    "AWS::GammaDilithium::JobDefinition.Ulimit": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-ulimit.html",
+      "Properties": {
+        "SoftLimit": {
+          "Required": true,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-ulimit.html#cfn-gammadilithium-jobdefinition-ulimit-softlimit",
+          "PrimitiveType": "Integer",
+          "UpdateType": "Mutable"
+        },
+        "HardLimit": {
+          "Required": true,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-ulimit.html#cfn-gammadilithium-jobdefinition-ulimit-hardlimit",
+          "PrimitiveType": "Integer",
+          "UpdateType": "Mutable"
+        },
+        "Name": {
+          "Required": true,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-ulimit.html#cfn-gammadilithium-jobdefinition-ulimit-name",
+          "PrimitiveType": "String",
+          "UpdateType": "Mutable"
+        }
+      }
+    },
+    "AWS::GammaDilithium::JobDefinition.EksHostPath": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-ekshostpath.html",
+      "Properties": {
+        "Path": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-ekshostpath.html#cfn-gammadilithium-jobdefinition-ekshostpath-path",
+          "PrimitiveType": "String",
+          "UpdateType": "Mutable"
+        }
+      }
+    },
+    "AWS::GammaDilithium::JobDefinition.EphemeralStorage": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-ecstaskproperties-ephemeralstorage.html",
+      "Properties": {
+        "SizeInGiB": {
+          "Required": true,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-ecstaskproperties-ephemeralstorage.html#cfn-gammadilithium-jobdefinition-ecstaskproperties-ephemeralstorage-sizeingib",
+          "PrimitiveType": "Integer",
+          "UpdateType": "Mutable"
+        }
+      }
+    },
+    "AWS::GammaDilithium::JobDefinition.NodeProperties": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-nodeproperties.html",
+      "Properties": {
+        "MainNode": {
+          "Required": true,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-nodeproperties.html#cfn-gammadilithium-jobdefinition-nodeproperties-mainnode",
+          "PrimitiveType": "Integer",
+          "UpdateType": "Mutable"
+        },
+        "NodeRangeProperties": {
+          "Type": "List",
+          "Required": true,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-nodeproperties.html#cfn-gammadilithium-jobdefinition-nodeproperties-noderangeproperties",
+          "ItemType": "NodeRangeProperty",
+          "UpdateType": "Mutable"
+        },
+        "NumNodes": {
+          "Required": true,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-nodeproperties.html#cfn-gammadilithium-jobdefinition-nodeproperties-numnodes",
+          "PrimitiveType": "Integer",
+          "UpdateType": "Mutable"
+        }
+      }
+    },
+    "AWS::GammaDilithium::JobDefinition.EksEmptyDir": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-eksemptydir.html",
+      "Properties": {
+        "Medium": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-eksemptydir.html#cfn-gammadilithium-jobdefinition-eksemptydir-medium",
+          "PrimitiveType": "String",
+          "UpdateType": "Mutable"
+        },
+        "SizeLimit": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-eksemptydir.html#cfn-gammadilithium-jobdefinition-eksemptydir-sizelimit",
+          "PrimitiveType": "String",
+          "UpdateType": "Mutable"
+        }
+      }
+    },
+    "AWS::GammaDilithium::JobDefinition.EksContainerSecurityContext": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-ekscontainersecuritycontext.html",
+      "Properties": {
+        "RunAsUser": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-ekscontainersecuritycontext.html#cfn-gammadilithium-jobdefinition-ekscontainersecuritycontext-runasuser",
+          "PrimitiveType": "Integer",
+          "UpdateType": "Mutable"
+        },
+        "AllowPrivilegeEscalation": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-ekscontainersecuritycontext.html#cfn-gammadilithium-jobdefinition-ekscontainersecuritycontext-allowprivilegeescalation",
+          "PrimitiveType": "Boolean",
+          "UpdateType": "Mutable"
+        },
+        "RunAsNonRoot": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-ekscontainersecuritycontext.html#cfn-gammadilithium-jobdefinition-ekscontainersecuritycontext-runasnonroot",
+          "PrimitiveType": "Boolean",
+          "UpdateType": "Mutable"
+        },
+        "Privileged": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-ekscontainersecuritycontext.html#cfn-gammadilithium-jobdefinition-ekscontainersecuritycontext-privileged",
+          "PrimitiveType": "Boolean",
+          "UpdateType": "Mutable"
+        },
+        "ReadOnlyRootFilesystem": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-ekscontainersecuritycontext.html#cfn-gammadilithium-jobdefinition-ekscontainersecuritycontext-readonlyrootfilesystem",
+          "PrimitiveType": "Boolean",
+          "UpdateType": "Mutable"
+        },
+        "RunAsGroup": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-ekscontainersecuritycontext.html#cfn-gammadilithium-jobdefinition-ekscontainersecuritycontext-runasgroup",
+          "PrimitiveType": "Integer",
+          "UpdateType": "Mutable"
+        }
+      }
+    },
+    "AWS::GammaDilithium::JobDefinition.EksSecret": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-ekssecret.html",
+      "Properties": {
+        "SecretName": {
+          "Required": true,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-ekssecret.html#cfn-gammadilithium-jobdefinition-ekssecret-secretname",
+          "PrimitiveType": "String",
+          "UpdateType": "Mutable"
+        },
+        "Optional": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-ekssecret.html#cfn-gammadilithium-jobdefinition-ekssecret-optional",
+          "PrimitiveType": "Boolean",
+          "UpdateType": "Mutable"
+        }
+      }
+    },
+    "AWS::GammaDilithium::JobDefinition.Device": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-device.html",
+      "Properties": {
+        "HostPath": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-device.html#cfn-gammadilithium-jobdefinition-device-hostpath",
+          "PrimitiveType": "String",
+          "UpdateType": "Mutable"
+        },
+        "Permissions": {
+          "PrimitiveItemType": "String",
+          "Type": "List",
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-device.html#cfn-gammadilithium-jobdefinition-device-permissions",
+          "UpdateType": "Mutable"
+        },
+        "ContainerPath": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-device.html#cfn-gammadilithium-jobdefinition-device-containerpath",
+          "PrimitiveType": "String",
+          "UpdateType": "Mutable"
+        }
+      }
+    },
+    "AWS::GammaDilithium::JobDefinition.NetworkConfiguration": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-ecstaskproperties-networkconfiguration.html",
+      "Properties": {
+        "AssignPublicIp": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-ecstaskproperties-networkconfiguration.html#cfn-gammadilithium-jobdefinition-ecstaskproperties-networkconfiguration-assignpublicip",
+          "PrimitiveType": "String",
+          "UpdateType": "Mutable"
+        }
+      }
+    },
+    "AWS::GammaDilithium::JobDefinition.ContainerProperties": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-containerproperties.html",
+      "Properties": {
+        "RepositoryCredentials": {
+          "Type": "RepositoryCredentials",
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-containerproperties.html#cfn-gammadilithium-jobdefinition-containerproperties-repositorycredentials",
+          "UpdateType": "Mutable"
+        },
+        "User": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-containerproperties.html#cfn-gammadilithium-jobdefinition-containerproperties-user",
+          "PrimitiveType": "String",
+          "UpdateType": "Mutable"
+        },
+        "Secrets": {
+          "Type": "List",
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-containerproperties.html#cfn-gammadilithium-jobdefinition-containerproperties-secrets",
+          "ItemType": "Secret",
+          "UpdateType": "Mutable"
+        },
+        "Memory": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-containerproperties.html#cfn-gammadilithium-jobdefinition-containerproperties-memory",
+          "PrimitiveType": "Integer",
+          "UpdateType": "Mutable"
+        },
+        "Privileged": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-containerproperties.html#cfn-gammadilithium-jobdefinition-containerproperties-privileged",
+          "PrimitiveType": "Boolean",
+          "UpdateType": "Mutable"
+        },
+        "LinuxParameters": {
+          "Type": "LinuxParameters",
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-containerproperties.html#cfn-gammadilithium-jobdefinition-containerproperties-linuxparameters",
+          "UpdateType": "Mutable"
+        },
+        "FargatePlatformConfiguration": {
+          "Type": "FargatePlatformConfiguration",
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-containerproperties.html#cfn-gammadilithium-jobdefinition-containerproperties-fargateplatformconfiguration",
+          "UpdateType": "Mutable"
+        },
+        "JobRoleArn": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-containerproperties.html#cfn-gammadilithium-jobdefinition-containerproperties-jobrolearn",
+          "PrimitiveType": "String",
+          "UpdateType": "Mutable"
+        },
+        "ReadonlyRootFilesystem": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-containerproperties.html#cfn-gammadilithium-jobdefinition-containerproperties-readonlyrootfilesystem",
+          "PrimitiveType": "Boolean",
+          "UpdateType": "Mutable"
+        },
+        "Vcpus": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-containerproperties.html#cfn-gammadilithium-jobdefinition-containerproperties-vcpus",
+          "PrimitiveType": "Integer",
+          "UpdateType": "Mutable"
+        },
+        "Image": {
+          "Required": true,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-containerproperties.html#cfn-gammadilithium-jobdefinition-containerproperties-image",
+          "PrimitiveType": "String",
+          "UpdateType": "Mutable"
+        },
+        "ResourceRequirements": {
+          "Type": "List",
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-containerproperties.html#cfn-gammadilithium-jobdefinition-containerproperties-resourcerequirements",
+          "ItemType": "ResourceRequirement",
+          "UpdateType": "Mutable"
+        },
+        "LogConfiguration": {
+          "Type": "LogConfiguration",
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-containerproperties.html#cfn-gammadilithium-jobdefinition-containerproperties-logconfiguration",
+          "UpdateType": "Mutable"
+        },
+        "MountPoints": {
+          "Type": "List",
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-containerproperties.html#cfn-gammadilithium-jobdefinition-containerproperties-mountpoints",
+          "ItemType": "MountPoints",
+          "UpdateType": "Mutable"
+        },
+        "ExecutionRoleArn": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-containerproperties.html#cfn-gammadilithium-jobdefinition-containerproperties-executionrolearn",
+          "PrimitiveType": "String",
+          "UpdateType": "Mutable"
+        },
+        "RuntimePlatform": {
+          "Type": "RuntimePlatform",
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-containerproperties.html#cfn-gammadilithium-jobdefinition-containerproperties-runtimeplatform",
+          "UpdateType": "Mutable"
+        },
+        "Volumes": {
+          "Type": "List",
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-containerproperties.html#cfn-gammadilithium-jobdefinition-containerproperties-volumes",
+          "ItemType": "Volumes",
+          "UpdateType": "Mutable"
+        },
+        "Command": {
+          "PrimitiveItemType": "String",
+          "Type": "List",
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-containerproperties.html#cfn-gammadilithium-jobdefinition-containerproperties-command",
+          "UpdateType": "Mutable"
+        },
+        "Environment": {
+          "Type": "List",
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-containerproperties.html#cfn-gammadilithium-jobdefinition-containerproperties-environment",
+          "ItemType": "Environment",
+          "UpdateType": "Mutable"
+        },
+        "Ulimits": {
+          "Type": "List",
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-containerproperties.html#cfn-gammadilithium-jobdefinition-containerproperties-ulimits",
+          "ItemType": "Ulimit",
+          "UpdateType": "Mutable"
+        },
+        "NetworkConfiguration": {
+          "Type": "NetworkConfiguration",
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-containerproperties.html#cfn-gammadilithium-jobdefinition-containerproperties-networkconfiguration",
+          "UpdateType": "Mutable"
+        },
+        "InstanceType": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-containerproperties.html#cfn-gammadilithium-jobdefinition-containerproperties-instancetype",
+          "PrimitiveType": "String",
+          "UpdateType": "Mutable"
+        },
+        "EphemeralStorage": {
+          "Type": "EphemeralStorage",
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-containerproperties.html#cfn-gammadilithium-jobdefinition-containerproperties-ephemeralstorage",
+          "UpdateType": "Mutable"
+        }
+      }
+    },
+    "AWS::GammaDilithium::JobDefinition.AuthorizationConfig": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-authorizationconfig.html",
+      "Properties": {
+        "Iam": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-authorizationconfig.html#cfn-gammadilithium-jobdefinition-authorizationconfig-iam",
+          "PrimitiveType": "String",
+          "UpdateType": "Mutable"
+        },
+        "AccessPointId": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-authorizationconfig.html#cfn-gammadilithium-jobdefinition-authorizationconfig-accesspointid",
+          "PrimitiveType": "String",
+          "UpdateType": "Mutable"
+        }
+      }
+    },
+    "AWS::GammaDilithium::JobDefinition.RuntimePlatform": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-ecstaskproperties-runtimeplatform.html",
+      "Properties": {
+        "OperatingSystemFamily": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-ecstaskproperties-runtimeplatform.html#cfn-gammadilithium-jobdefinition-ecstaskproperties-runtimeplatform-operatingsystemfamily",
+          "PrimitiveType": "String",
+          "UpdateType": "Mutable"
+        },
+        "CpuArchitecture": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-ecstaskproperties-runtimeplatform.html#cfn-gammadilithium-jobdefinition-ecstaskproperties-runtimeplatform-cpuarchitecture",
+          "PrimitiveType": "String",
+          "UpdateType": "Mutable"
+        }
+      }
+    },
+    "AWS::GammaDilithium::JobDefinition.Tmpfs": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-tmpfs.html",
+      "Properties": {
+        "Size": {
+          "Required": true,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-tmpfs.html#cfn-gammadilithium-jobdefinition-tmpfs-size",
+          "PrimitiveType": "Integer",
+          "UpdateType": "Mutable"
+        },
+        "ContainerPath": {
+          "Required": true,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-tmpfs.html#cfn-gammadilithium-jobdefinition-tmpfs-containerpath",
+          "PrimitiveType": "String",
+          "UpdateType": "Mutable"
+        },
+        "MountOptions": {
+          "PrimitiveItemType": "String",
+          "Type": "List",
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-tmpfs.html#cfn-gammadilithium-jobdefinition-tmpfs-mountoptions",
+          "UpdateType": "Mutable"
+        }
+      }
+    },
+    "AWS::GammaDilithium::JobDefinition.EvaluateOnExit": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-evaluateonexit.html",
+      "Properties": {
+        "Action": {
+          "Required": true,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-evaluateonexit.html#cfn-gammadilithium-jobdefinition-evaluateonexit-action",
+          "PrimitiveType": "String",
+          "UpdateType": "Mutable"
+        },
+        "OnExitCode": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-evaluateonexit.html#cfn-gammadilithium-jobdefinition-evaluateonexit-onexitcode",
+          "PrimitiveType": "String",
+          "UpdateType": "Mutable"
+        },
+        "OnReason": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-evaluateonexit.html#cfn-gammadilithium-jobdefinition-evaluateonexit-onreason",
+          "PrimitiveType": "String",
+          "UpdateType": "Mutable"
+        },
+        "OnStatusReason": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gammadilithium-jobdefinition-evaluateonexit.html#cfn-gammadilithium-jobdefinition-evaluateonexit-onstatusreason",
+          "PrimitiveType": "String",
+          "UpdateType": "Mutable"
+        }
+      }
+    }
+  },
+  "ResourceType": {
+    "AWS::GammaDilithium::JobDefinition": {
+      "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gammadilithium-jobdefinition.html",
+      "Properties": {
+        "Parameters": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gammadilithium-jobdefinition.html#cfn-gammadilithium-jobdefinition-parameters",
+          "PrimitiveType": "Json",
+          "UpdateType": "Mutable"
+        },
+        "Timeout": {
+          "Type": "Timeout",
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gammadilithium-jobdefinition.html#cfn-gammadilithium-jobdefinition-timeout",
+          "UpdateType": "Mutable"
+        },
+        "JobDefinitionName": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gammadilithium-jobdefinition.html#cfn-gammadilithium-jobdefinition-jobdefinitionname",
+          "PrimitiveType": "String",
+          "UpdateType": "Immutable"
+        },
+        "PropagateTags": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gammadilithium-jobdefinition.html#cfn-gammadilithium-jobdefinition-propagatetags",
+          "PrimitiveType": "Boolean",
+          "UpdateType": "Mutable"
+        },
+        "PlatformCapabilities": {
+          "PrimitiveItemType": "String",
+          "Type": "List",
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gammadilithium-jobdefinition.html#cfn-gammadilithium-jobdefinition-platformcapabilities",
+          "UpdateType": "Mutable"
+        },
+        "EksProperties": {
+          "Type": "EksProperties",
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gammadilithium-jobdefinition.html#cfn-gammadilithium-jobdefinition-eksproperties",
+          "UpdateType": "Mutable"
+        },
+        "Type": {
+          "Required": true,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gammadilithium-jobdefinition.html#cfn-gammadilithium-jobdefinition-type",
+          "PrimitiveType": "String",
+          "UpdateType": "Mutable"
+        },
+        "NodeProperties": {
+          "Type": "NodeProperties",
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gammadilithium-jobdefinition.html#cfn-gammadilithium-jobdefinition-nodeproperties",
+          "UpdateType": "Mutable"
+        },
+        "SchedulingPriority": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gammadilithium-jobdefinition.html#cfn-gammadilithium-jobdefinition-schedulingpriority",
+          "PrimitiveType": "Integer",
+          "UpdateType": "Mutable"
+        },
+        "ContainerProperties": {
+          "Type": "ContainerProperties",
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gammadilithium-jobdefinition.html#cfn-gammadilithium-jobdefinition-containerproperties",
+          "UpdateType": "Mutable"
+        },
+        "EcsProperties": {
+          "Type": "EcsProperties",
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gammadilithium-jobdefinition.html#cfn-gammadilithium-jobdefinition-ecsproperties",
+          "UpdateType": "Mutable"
+        },
+        "RetryStrategy": {
+          "Type": "RetryStrategy",
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gammadilithium-jobdefinition.html#cfn-gammadilithium-jobdefinition-retrystrategy",
+          "UpdateType": "Mutable"
+        },
+        "Tags": {
+          "Required": false,
+          "Documentation": "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gammadilithium-jobdefinition.html#cfn-gammadilithium-jobdefinition-tags",
+          "PrimitiveType": "Json",
+          "UpdateType": "Immutable"
+        }
+      }
+    }
+  },
+  "ResourceSpecificationVersion": "186.0.0"
+}

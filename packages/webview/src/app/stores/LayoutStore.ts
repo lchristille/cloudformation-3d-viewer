@@ -2,7 +2,7 @@ import { makeAutoObservable } from "mobx";
 
 class LayoutStore {
     showStats = false;
-    showOutliner = false;
+    showSidebar = true;
 
     constructor() {
         makeAutoObservable(this);
@@ -12,8 +12,8 @@ class LayoutStore {
         this.showStats = !this.showStats;
     }
 
-    toggleOutlinerVisibility() {
-        this.showOutliner = !this.showOutliner;
+    toggleSidebarVisibility() {
+        this.showSidebar = !this.showSidebar;
     }
 }
 

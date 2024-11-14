@@ -5,6 +5,8 @@ import Sidebar from "./layout/Sidebar";
 import MainViewport from "./layout/MainViewport";
 import Properties from "./layout/Properties";
 import BottomPanel from "./layout/BottomPanel";
+import { observer } from "mobx-react-lite";
+import { useStore } from "./stores/StoreContext";
 
 const editorLayout = css`
   display: grid;
@@ -21,16 +23,18 @@ const editorLayout = css`
   height: 100vh;
 `;
 
-const App: React.FC = () => {
+const App: React.FC = observer(() => {
+  const { layoutStore } = useStore();  
+
   return (
     <div css={[editorLayout]}>
       <Toolbar />
-      <Sidebar />
+      { layoutStore.showSidebar && <Sidebar /> }
       <MainViewport />
       <Properties />
       <BottomPanel />
     </div>
   );
-};
+});
 
 export default App;

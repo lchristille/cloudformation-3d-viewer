@@ -24,7 +24,7 @@ const Toolbar: React.FC = () => {
       <ToolbarButton
         tooltipText="Show/Hide Outliner"
         onClick={() => {
-          layoutStore.toggleOutlinerVisibility();
+          layoutStore.toggleSidebarVisibility();
         }}
       >
         <CgListTree />

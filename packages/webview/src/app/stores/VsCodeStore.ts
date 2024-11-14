@@ -1,5 +1,7 @@
+import { CFResources } from 'cloudformation-3d-shared';
 import { makeAutoObservable, runInAction } from 'mobx';
 import * as vscode from 'vscode';
+import { store } from './Store';
 
 class VsCodeStore {
     vscode: ReturnType<typeof acquireVsCodeApi>;
@@ -36,6 +38,10 @@ class VsCodeStore {
         return this.sendAsyncMessage('getMainDocumentSymbols');
     }
 
+    async getTemplateResources(): Promise<CFResources> {
+        return this.sendAsyncMessage('getTemplateResources');
+    }
+
     private handleMessage(event: MessageEvent) {
         const message = event.data;
 
@@ -54,6 +60,11 @@ class VsCodeStore {
             } else {
                 console.warn(`Property "${propertyName} does not exist in VsCodeStore.`);
             }
+        } else if (message.type == 'notification') {
+            store.notifier.notifySubscribers({
+                kind: message.kind,
+                payload: message.payload
+            });
         }
     }
 

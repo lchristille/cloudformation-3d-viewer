@@ -65,6 +65,7 @@ export class CloudFormation3DViewerProvider
 
     store.webViewPanel = webviewPanel;
     store.document = document;
+    store.templateProvider.addDocument(document.uri);
 
     webviewPanel.webview.html = this.getHtmlForWebview(webviewPanel.webview);
 
